@@ -3,14 +3,35 @@
 **Category:** 31-models
 **Aliases:** LDN close reversal, London close fade, European unwind reversal
 **ICT Confidence:** high
-**Year Introduced:** 2022
-**Year Refined:** 2022
-**Source IDs:** ICT-2022-MENTORSHIP-OVERVIEW
+**Year Introduced:** 2017
+**Year Refined:** 2017
+**Source IDs:** ICT-2017-DAYTRADE-ESSENTIALS, ICT-2017-DEFINING-DAILY-RANGE
 **Tags:** model, london-close, reversal
 
 ## Definition
 
-The London Close Reversal is a named ICT setup where the **London-open direction reverses during the London Close window (10:00–12:00 NY)**. As European desks unwind their morning positions, the directional move from London open often gets faded — particularly when the morning move was extended and HTF bias was less than fully bullish/bearish on the morning side. The reversal frequently produces the day's HOD or LOD.
+A reversal occurring in the **London close killzone, 10:00–12:00 NY**
+(`ICT-2017-DEFINING-DAILY-RANGE`, 04:31). ICT does teach it — but as an **occasional** event inside
+a window he otherwise uses for **exits**, not as a primary setup:
+
+> "London close is the time of day where **we look to really bank our positions**. And there are
+> **times when**, if the market is in a reversal intraday but it goes down into a logical level of
+> support or trades up into a logical level of resistance, **that may be the very moment in time
+> that a reversal occurs**. London close is **not always** just simply close existing trades and
+> move to the sidelines — many times London close can be incorporated as **an entry point for
+> longer-term one-shot-one-kill or swing or position trades**."
+> (`ICT-2017-DAYTRADE-ESSENTIALS`, 14:52–15:28)
+
+⚠ **ICT demotes this window by name** in the same breath: "I've taught London close day trading
+strategy in the past, I used to do it — **I lost interest in it because it just doesn't give me
+enough of a payment**" [14:31–14:47]. Any page that presents the London close reversal as a
+front-line day-trade model has inverted his own ranking of it. When he does enter here, the stated
+purpose is a **longer-term** position, not an intraday scalp.
+
+⚠ **Two claims previously on this page are unsourced** and have been removed: that the reversal
+"**frequently produces the day's HOD or LOD**", and the European-desk-unwind mechanism. Neither
+appears in the corpus. The 5-condition checklist below is **library-constructed**, not ICT's — he
+gives no enumerated criteria for this setup.
 
 ## Formal Criteria
 
@@ -47,10 +68,10 @@ london_close_reversal:
   ],
   "timeframes": ["M5","M15","H1"],
   "confidence": "high",
-  "year_introduced": "2022",
-  "year_refined": "2022",
+  "year_introduced": "2017",
+  "year_refined": "2017",
   "related": ["london-close","london-close-killzone","ny-am-killzone","silver-bullet-ny-am","ict-2022-model","liquidity-sweep"],
-  "sources": ["ICT-2022-MENTORSHIP-OVERVIEW"]
+  "sources": ["ICT-2017-DAYTRADE-ESSENTIALS","ICT-2017-DEFINING-DAILY-RANGE"]
 }
 ```
 
@@ -93,4 +114,12 @@ M5 / M15 / H1.
 
 ## Citations
 
-- `ICT-2022-MENTORSHIP-OVERVIEW`.
+- `ICT-2017-DAYTRADE-ESSENTIALS` (`-cXnnHjy9s0`, Month 08, **April 2017**, lesson 1) — the
+  demotion and the conditional reversal, [14:31–15:28], quoted above.
+- `ICT-2017-DEFINING-DAILY-RANGE` (`_2nUKLAD9ig`, Month 08, lesson 2) — the window itself: **ICT
+  London close killzone 10:00 → 12:00** [04:31], inside a time set ICT frames as settled — "this is
+  the **definitive teaching** … if you've seen anything different in the past, **this is the real
+  one**" [02:13]. ⚠ That same set puts London open at **01:00–05:00** and New York at
+  **07:00–10:00**; see [killzone-times-table](../10-killzones/killzone-times-table.md).
+- ⚠ **Re-dated 2022 → 2017 and re-cited on 2026-09-11.** Previously rested solely on
+  `ICT-2022-MENTORSHIP-OVERVIEW`, a registry stub.

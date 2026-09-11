@@ -3,9 +3,9 @@
 **Category:** 02-liquidity
 **Aliases:** ERL, external liquidity, range-bounding liquidity
 **ICT Confidence:** high
-**Year Introduced:** 2022
-**Year Refined:** 2022
-**Source IDs:** ICT-2022-MENTORSHIP-OVERVIEW
+**Year Introduced:** 2016
+**Year Refined:** 2017
+**Source IDs:** ICT-2016-REINFORCING-LIQUIDITY, ICT-2017-INTRADAY-TOP-DOWN
 **Tags:** liquidity, erl, external, dealing-range
 
 ## Definition
@@ -41,10 +41,10 @@ After ERL is taken, a new dealing range begins forming and the old ERL becomes a
   ],
   "timeframes": ["M5","M15","H1","H4","D","W"],
   "confidence": "high",
-  "year_introduced": "2022",
-  "year_refined": "2022",
+  "year_introduced": "2016",
+  "year_refined": "2017",
   "related": ["internal-range-liquidity","external-structure","draw-on-liquidity","dealing-range","liquidity-pool","bos-bullish","bos-bearish"],
-  "sources": ["ICT-2022-MENTORSHIP-OVERVIEW"]
+  "sources": ["ICT-2016-REINFORCING-LIQUIDITY","ICT-2017-INTRADAY-TOP-DOWN"]
 }
 ```
 
@@ -89,4 +89,20 @@ Most useful H1+. ERL on D / W are major reversal/continuation reference points; 
 
 ## Citations
 
-- `ICT-2022-MENTORSHIP-OVERVIEW` — IRL/ERL distinction formalized.
+- `ICT-2016-REINFORCING-LIQUIDITY` (`npL3ZXJ5zOU`, Month 04, **December 2016**, module 2) —
+  "first on the menu today is going to be **external range liquidity**" [00:49]; "the current
+  trading range will have **buy side liquidity above the range high** … **sell side liquidity
+  below the range or low**" [00:54–01:02], sought because "you don't want to have any resistance
+  in your path of profitability" [01:24–01:28]. Worked through on a sweep: "price sweeps above
+  this old high … **that will be a form of external range liquidity because it's outside the
+  range**" [03:11–03:19], after which "we now have to **redefine** the high" [05:39].
+- ⚠ **The label is relative to the range you define, not absolute.** Same lecture: "**in the
+  context from this high to this low it's internal range liquidity, but from this low to this high
+  it's external range liquidity**" [05:46–06:13]. A page that treats ERL as a fixed property of a
+  price level has lost this.
+- `ICT-2017-INTRADAY-TOP-DOWN` (`Oec_0NM_OeY`, Month 12, **August 2017**) — "I'm defining a range,
+  either I'm going to operate as internal range liquidity or I'm going to be working off
+  **external range liquidity**" [17:12]; ERL is paired with turtle soup as one of his two intraday
+  patterns [36:37–36:56].
+- ⚠ **Re-dated 2022 → 2016 on 2026-09-11.** Previously cited only the registry stub
+  `ICT-2022-MENTORSHIP-OVERVIEW`; `TIMELINE.md` had already flagged the mis-dating.

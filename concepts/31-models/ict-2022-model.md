@@ -2,7 +2,7 @@
 
 **Category:** 31-models
 **Aliases:** ICT 2022 setup, 2022 mentorship model, the 2022 model
-**ICT Confidence:** high
+**ICT Confidence:** medium
 **Year Introduced:** 2022
 **Year Refined:** 2022
 **Source IDs:** ICT-2022-MENTORSHIP-OVERVIEW
@@ -82,7 +82,7 @@ ict_2022_model :=
     {"id": "c5", "expr": "UNRESOLVED clock set: public_2016_2022 vs mentorship_2017 ([01:00,05:00] london, [07:00,10:00] ny); sole source is a registry stub"}
   ],
   "timeframes": ["M5","M15","H1","H4"],
-  "confidence": "high",
+  "confidence": "medium",
   "year_introduced": "2022",
   "year_refined": "2022",
   "related": ["ict-2023-model","ict-2024-model","ict-day-trading-model","silver-bullet-overview","silver-bullet-rules","htf-bias-framework","killzone-overview","killzone-times-table","liquidity-sweep","displacement-definition","fair-value-gap","ce-as-primary-entry"],

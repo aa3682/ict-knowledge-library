@@ -3,14 +3,34 @@
 **Category:** 31-models
 **Aliases:** NY AM open range, NY opening range, OR model
 **ICT Confidence:** high
-**Year Introduced:** 2022
-**Year Refined:** 2022
-**Source IDs:** ICT-2022-MENTORSHIP-OVERVIEW
+**Year Introduced:** 2017
+**Year Refined:** 2017
+**Source IDs:** ICT-2017-BOND-OPENING-RANGE, ICT-2017-INDEX-OPENING-RANGE, ICT-2017-BOND-CONSOLIDATION-DAYS
 **Tags:** model, ny-am, opening-range
 
 ## Definition
 
-The NY AM Open Range Model uses the **first 30 to 60 minutes of NY AM (08:00–08:30 or 08:00–09:00 NY)** as the day's opening range. ICT teaches that this opening range often gets swept on one side during the NY AM killzone and the daily delivery extends in the opposite direction. The Open Range high and low function as intra-day BSL/SSL pools that the algorithm targets during the NY AM Silver Bullet hour.
+The opening range is the **first hour of the cash session**, used as the day's reference range.
+ICT teaches it in **June 2017**, and he teaches it **per instrument, with different clocks** — it
+is a futures concept, not a generic FX "NY AM" model:
+
+| Instrument | Opening range (NY) | Highest volume |
+|---|---|---|
+| 30-yr Treasury bond (ZB) | **08:00 – 09:00** | 08:00 – 09:30 |
+| E-mini S&P (ES) | **09:30 – 10:30** | 09:30 – 10:00 |
+
+For bonds the window is load-bearing: "the opening range between 8 a.m. and 9 a.m. **tends to
+create the bond market high or low of the day**" (`ICT-2017-BOND-OPENING-RANGE`, 03:47). A narrow
+opening range is the setup condition — "if you look at an opening range of **12 ticks or less** …
+generally, you'll have an **expansion move** of some kind … that volatility squeeze … and then
+finally it'll snap and move in a direction that you would have predetermined based on
+institutional order flow" (`ICT-2017-BOND-CONSOLIDATION-DAYS`, 09:37–10:07).
+
+⚠ **Three claims previously on this page are not in the corpus** and have been removed: an
+`08:00–08:30` "short OR" (no source — the bond range is a **full hour**), the framing of the range
+as an FX/"NY AM killzone" model (the lectures are **bonds and index futures**, both opened with a
+paper-trade-only disclaimer), and the Silver Bullet targeting (**SB is 2022 vocabulary**; this is
+2017 content and the term does not appear in it).
 
 ## Formal Criteria
 
@@ -45,10 +65,10 @@ trigger:
   ],
   "timeframes": ["M5","M15","H1"],
   "confidence": "high",
-  "year_introduced": "2022",
-  "year_refined": "2022",
+  "year_introduced": "2017",
+  "year_refined": "2017",
   "related": ["ict-2022-model","silver-bullet-ny-am","ny-am-killzone","ny-am-session","liquidity-sweep","htf-bias-framework"],
-  "sources": ["ICT-2022-MENTORSHIP-OVERVIEW"]
+  "sources": ["ICT-2017-BOND-OPENING-RANGE","ICT-2017-INDEX-OPENING-RANGE","ICT-2017-BOND-CONSOLIDATION-DAYS"]
 }
 ```
 
@@ -96,4 +116,17 @@ M5–H1.
 
 ## Citations
 
-- `ICT-2022-MENTORSHIP-OVERVIEW`.
+- `ICT-2017-BOND-OPENING-RANGE` (`CGbSpa_9Z9Y`, Month 10) — "**June 2017** ICT Mentorship, ICT
+  Bond Trading Lesson 1, **Basics and Opening Range Concept**" [00:23]; NY session for bonds
+  "begins at **8.20 a.m. to 3 p.m.**" [01:11]; highest volume **08:00–09:30** [03:16]; "the opening
+  range begins at **8 a.m.** New York time and ends **9 a.m.**" [03:29]; "the opening range between
+  8 a.m. and 9 a.m. **tends to create the bond market high or low of the day**" [03:47].
+- `ICT-2017-INDEX-OPENING-RANGE` (`ORbtHOUzAIM`, Month 10) — "**June 2017**, ICT mentorship, ICT
+  index trading, concepts lesson one, **basics and opening range concept**" [00:22]; ES true day
+  **09:30–16:00** [02:51]; highest volume "between **9.30 a.m. and 10 a.m.**" [02:35]; "opening
+  range is going to be seen with **9.30 a.m.** … and ends at **10.30 a.m.** … so you have an
+  opening range of **one hour**" [03:07–03:15].
+- `ICT-2017-BOND-CONSOLIDATION-DAYS` (`RgpxhuVp5Xg`, Month 10) — the narrow-range trigger, "**12 ticks
+  or less**" [09:37–10:07].
+- ⚠ **Re-dated 2022 → 2017 and re-cited on 2026-09-11.** Previously rested solely on
+  `ICT-2022-MENTORSHIP-OVERVIEW`, a registry stub.

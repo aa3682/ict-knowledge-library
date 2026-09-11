@@ -3,14 +3,34 @@
 **Category:** 31-models
 **Aliases:** NY PM fade, afternoon reversal, PM trend-fade
 **ICT Confidence:** high
-**Year Introduced:** 2022
-**Year Refined:** 2022
-**Source IDs:** ICT-2022-MENTORSHIP-OVERVIEW
+**Year Introduced:** 2017
+**Year Refined:** 2017
+**Source IDs:** ICT-2017-INDEX-PM-TREND, ICT-2017-DAYTRADE-ESSENTIALS
 **Tags:** model, ny-pm, reversal
 
 ## Definition
 
-The NY PM Reversal is a named ICT setup where **the NY AM direction reverses during NY PM (13:30–16:00 NY)**. Common pattern: AM extended to a daily extreme, lunch consolidated near the extreme, then PM session sweeps the lunch range and reverses back through NY AM range. ICT teaches PM Reversals as the typical "afternoon fade" that retraces the morning move; they're reliable but lower-frequency than continuation patterns.
+ICT's afternoon teaching is the **PM trend** (his term; also "the afternoon swing") — the
+**13:00–16:00 NY** price swing, taught for index futures in **June 2017**. A reversal is one of
+its **two** outcomes, not its definition:
+
+> "The PM trend **can be a continuation of the AM trend direction _or_ an intraday reversal going
+> into the close**." (`ICT-2017-INDEX-PM-TREND`, 01:41)
+
+⚠ **This page previously asserted the reversal as the default** — "the typical afternoon fade that
+retraces the morning move." That is not what the lecture teaches, and its three worked examples are
+**continuations**: price trades down into an AM-session order block and rallies away from it into
+the high of the day (03:39–04:38). Corrected.
+
+The window and its shape, as taught:
+
+- NY PM session = **13:00 – 16:00** NY (not 13:30). "New York PM session is viewed by way of
+  defining the 1 pm to [4] pm hours" (00:41–01:04).
+- "The **true day high or low will tend to form between 3 pm and 4 pm** New York time" (01:15).
+- "Typically **2 pm** New York time sees the move begin", though it can start as early as 1 pm
+  (01:59–02:06). Afternoon measured moves "tend to be **faster** than … the AM session" (01:52).
+- **Lunch is noon–13:00**, elastic: "it can actually be as early as **11 a.m.** to as late as
+  **2 p.m.**", short after a fast morning, full after a lethargic one (02:41–03:24).
 
 ## Formal Criteria
 
@@ -49,10 +69,10 @@ ny_pm_reversal:
   ],
   "timeframes": ["M5","M15","H1"],
   "confidence": "high",
-  "year_introduced": "2022",
-  "year_refined": "2022",
+  "year_introduced": "2017",
+  "year_refined": "2017",
   "related": ["ny-pm-session","ny-pm-killzone","silver-bullet-ny-pm","ny-lunch","macro-time-1350-1410","macro-time-1450-1510","liquidity-sweep","ict-2022-model"],
-  "sources": ["ICT-2022-MENTORSHIP-OVERVIEW"]
+  "sources": ["ICT-2017-INDEX-PM-TREND","ICT-2017-DAYTRADE-ESSENTIALS"]
 }
 ```
 
@@ -96,4 +116,17 @@ M5 / M15 / H1.
 
 ## Citations
 
-- `ICT-2022-MENTORSHIP-OVERVIEW`.
+- `ICT-2017-INDEX-PM-TREND` (`qZg_5bac518`, Month 10, **June 2017**, index trading lesson 3) —
+  "the PM trend … the afternoon session in North America … typically after noon, New York lunch
+  hour" [00:26–00:41]; session defined as 1 pm to 4 pm [00:41–01:04]; true-day extreme **15:00–16:00**
+  [01:15]; **continuation _or_ reversal** [01:41]; 2 pm start [01:59]; lunch elasticity
+  [02:41–03:24]; three worked continuation examples off AM order blocks [03:39–05:10]. ⚠ Opens
+  with a **paper-trade-only** disclaimer — this is commodity/index content, not FX.
+- `ICT-2017-DAYTRADE-ESSENTIALS` (`-cXnnHjy9s0`, Month 08, **April 2017**) — the FX day-trading
+  model takes the opposite posture on the afternoon: the 14:00 hour and the **15:00 bond close**
+  bound the day, and "generally **by noon you're done**, you're not really looking at anything past
+  noon" [16:18–16:24]. ⚠ **The two lectures are not in conflict — they are different markets.**
+  A page that reads as a general "NY PM model" without saying which is misleading.
+- ⚠ **Re-dated 2022 → 2017 and re-cited on 2026-09-11.** Previously rested solely on
+  `ICT-2022-MENTORSHIP-OVERVIEW`, a registry stub. ⚠ The Silver-Bullet PM framing was removed:
+  SB is 2022 vocabulary and does not appear in this 2017 content.

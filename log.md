@@ -6,6 +6,57 @@ Per the Karpathy LLM Wiki pattern, this file complements [`INDEX.md`](INDEX.md) 
 
 ---
 
+## [2026-09-11] fix | All six stub-only pages were verifiable and all six were mis-dated. None is 2022 content.
+
+Closes the follow-up from this morning's second pass. Every page resting solely on the registry stub
+`ICT-2022-MENTORSHIP-OVERVIEW` has been checked against the corpus, re-cited and re-dated. **No new
+Source IDs were needed — all six already existed in `SOURCES.md`.** The stub was standing in for
+sources the vault already had.
+
+- `internal-range-liquidity`, `external-range-liquidity` — **2022 → 2016**
+  (`ICT-2016-REINFORCING-LIQUIDITY` Dec 2016, + `ICT-2017-INTRADAY-TOP-DOWN`).
+- `range-expansion` — **2022 → 2016** (`ICT-2016-MARKET-EFFICIENCY-PARADIGM` Sep 2016,
+  + `ICT-2017-CONSOLIDATION-TRADING`).
+- `ny-am-open-range-model`, `london-close-reversal`, `ny-pm-reversal` — **2022 → 2017**.
+
+`TIMELINE.md` had **already predicted two of these** — its 2025 section flagged ERL/IRL as "Dec
+2016, not 2022 … left for a follow-up." Note now marked closed; all six moved to their correct year
+sections, placement verified 7/7.
+
+⚠ **Three pages asserted mechanics the corpus contradicts.** Re-citing alone would have dressed up
+the errors:
+- **`ny-pm-reversal` had it backwards.** It called the reversal "the typical afternoon fade". ICT:
+  the PM trend "can be a **continuation** of the AM trend direction **or** an intraday reversal"
+  (`ICT-2017-INDEX-PM-TREND` [01:41]) — and all three worked examples are continuations. Session is
+  **13:00**–16:00 not 13:30; lunch **noon–13:00**; true-day extreme **15:00–16:00**.
+- **`ny-am-open-range-model` had the wrong instrument and clock.** The opening range is per
+  instrument — bonds **08:00–09:00**, e-mini S&P **09:30–10:30**, one hour each. The `08:00–08:30`
+  "short OR" is in no lecture; the "NY AM killzone" framing is FX applied to **futures** content;
+  the Silver Bullet targeting is 2022 vocabulary on 2017 material. Gained a real trigger: a narrow
+  range, "**12 ticks or less**", precedes the expansion (`ICT-2017-BOND-CONSOLIDATION-DAYS` [09:37]).
+- **`london-close-reversal` inverted ICT's ranking.** He demotes the window by name — "**I lost
+  interest in it because it just doesn't give me enough of a payment**"
+  (`ICT-2017-DAYTRADE-ESSENTIALS` [14:31]). It is where he banks positions; reversal entries happen
+  "at times", for longer-term trades. Removed as unsourced: "frequently produces the day's HOD or
+  LOD", and the European-desk-unwind mechanism.
+
+Also recorded: ERL/IRL labels are **relative to the range you define**, not properties of a level
+("from this high to this low it's internal … **but from this low to this high it's external**",
+[05:46–06:13]); and expansion is one of **four** phases, not contraction's partner.
+
+**`ict-2022-model` re-graded `high` → `medium`** (owner-approved). It is now the only page in the
+vault resting on the stub alone — correctly, as nothing else dates or describes it.
+
+⚠ **Next sweep, not done here:** `range-contraction` carries `Year Introduced: 2022` against a
+**2016** citation. It is in the 153-page "cites the stub but also a real source" group, which this
+pass did not touch — **a page can cite a real source and still be dated off the stub.** That needs a
+year-vs-citation consistency check across the vault; `tools/lint.py` does not run one.
+
+Report: [`meta/lint-report-2026-09-11-c.md`](meta/lint-report-2026-09-11-c.md). `tools/lint.py`:
+287 pages, 191 source ids, 0 problems.
+
+---
+
 ## [2026-09-11] fix | The 2022 Model's source does not exist. Contradiction resolved against the corpus; 7 pages found resting on the stub.
 
 Follow-up to this morning's lint (below), which left the killzone contradiction open pending a

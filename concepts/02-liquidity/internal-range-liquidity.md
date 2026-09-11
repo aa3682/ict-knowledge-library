@@ -3,9 +3,9 @@
 **Category:** 02-liquidity
 **Aliases:** IRL, internal liquidity, intra-range liquidity
 **ICT Confidence:** high
-**Year Introduced:** 2022
-**Year Refined:** 2022
-**Source IDs:** ICT-2022-MENTORSHIP-OVERVIEW
+**Year Introduced:** 2016
+**Year Refined:** 2017
+**Source IDs:** ICT-2016-REINFORCING-LIQUIDITY, ICT-2017-INTRADAY-TOP-DOWN
 **Tags:** liquidity, irl, internal, dealing-range
 
 ## Definition
@@ -46,10 +46,10 @@ is_ERL(level) := level >= LTH_ext OR level <= LTL_ext
   ],
   "timeframes": ["M5","M15","H1","H4","D"],
   "confidence": "high",
-  "year_introduced": "2022",
-  "year_refined": "2022",
+  "year_introduced": "2016",
+  "year_refined": "2017",
   "related": ["external-range-liquidity","internal-structure","fair-value-gap","draw-on-liquidity","dealing-range","liquidity-pool"],
-  "sources": ["ICT-2022-MENTORSHIP-OVERVIEW"]
+  "sources": ["ICT-2016-REINFORCING-LIQUIDITY","ICT-2017-INTRADAY-TOP-DOWN"]
 }
 ```
 
@@ -96,4 +96,20 @@ Most operational on H1+ where dealing ranges are coherent. On M1/M5 the LTH/LTL 
 
 ## Citations
 
-- `ICT-2022-MENTORSHIP-OVERVIEW` — IRL/ERL distinction formalized in 2022 mentorship.
+- `ICT-2016-REINFORCING-LIQUIDITY` (`npL3ZXJ5zOU`, Month 04, **December 2016**, module 2) —
+  introduces the pair in order: "first on the menu today is going to be **external range
+  liquidity**" [00:49]; "Secondly, we have **internal range liquidity**" [01:34]. The
+  inside-the-range inventory is given as liquidity voids, fair value gaps and order blocks that
+  "will be populated with new buys and or sells" [01:39–02:37]. Crucially, **the label is relative
+  to which range you define**, not absolute: of one pool ICT asks "would that be … external range
+  liquidity or internal range liquidity", and answers "**in the context from this high to this low
+  it's internal range liquidity, but from this low to this high it's external range liquidity**"
+  [05:46–06:13].
+- `ICT-2017-INTRADAY-TOP-DOWN` (`Oec_0NM_OeY`, Month 12, **August 2017**) — the operational
+  framing: "I'm defining a range, either I'm going to operate as **internal range liquidity** or
+  I'm going to be working off **external range liquidity**" [17:12]. Reduces his intraday book to
+  the two: "it's either going to be an **internal range liquidity, optimal trade entry** … or it's
+  going to be **external range liquidity run**, or basically it's **turtle soup**" [36:56].
+- ⚠ **Re-dated 2022 → 2016 on 2026-09-11.** The page previously cited only
+  `ICT-2022-MENTORSHIP-OVERVIEW`, a registry stub. `TIMELINE.md` had already flagged the
+  mis-dating and left it for a follow-up; this is that follow-up.

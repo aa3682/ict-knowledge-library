@@ -72,10 +72,13 @@ resolved: **17 new concept pages, 6 refinements of existing pages, 3 dating corr
   JSON — an edit-shape failure no existing check could see. Run it before every commit.
 - ⚠⚠ **`ICT-2022-MENTORSHIP-OVERVIEW` IS A REGISTRY STUB (2026-09-11).** No video ID, date,
   quotation or `raw/` packet — same failure mode as `ICT-2018-BLOCKS`. **172 pages cite it;
-  153 also carry a real source, but 7 rest on it alone** — `ict-2022-model` (fixed),
-  `london-close-reversal`, `ny-am-open-range-model`, `ny-pm-reversal`, `range-expansion`,
-  `external-range-liquidity`, `internal-range-liquidity`. **The six untouched need their own
-  source checks** — three are `31-models/` pages, a build-artifact shape. The
+  153 also carry a real source.** ✅ **All 7 that rested on it alone are resolved (2026-09-11):
+  six were verifiable, all six mis-dated — ERL/IRL and `range-expansion` → 2016,
+  `ny-am-open-range-model` / `london-close-reversal` / `ny-pm-reversal` → 2017, every one re-cited
+  to a Source ID that already existed.** `ict-2022-model` is now the only stub-only page, and is
+  re-graded `medium`. ⚠ **Next: a year-vs-citation sweep of the other 152** — `range-contraction`
+  is dated 2022 against a 2016 citation, so a page can cite a real source and still be dated off
+  the stub; `tools/lint.py` runs no such check. The
   `ICT-2022-MENTORSHIP-CORE-CONTENT-*` packets are **not** this ID's content; they are the
   2016–2017 mentorship under their own IDs.
 - **Killzone contradiction CLOSED** on `ict-2022-model`: three-window list stands, "any
@@ -84,6 +87,12 @@ resolved: **17 new concept pages, 6 refinements of existing pages, 3 dating corr
   public `02:00` vs mentorship `01:00`, which ICT rejects by name. Open for the owner: the page
   still reads `ICT Confidence: high` on an unreadable citation; **recommend `medium`**.
   Still unactioned: the page has **no MSS step**; chain is sweep → displacement (FVG) → CE.
+- ⚠ **Three model pages were factually wrong, not just mis-cited (2026-09-11).** `ny-pm-reversal`
+  called the reversal the default — ICT says the PM trend is "**continuation or** reversal", and
+  his examples are continuations. `ny-am-open-range-model` had an FX/Silver-Bullet framing on
+  **June-2017 futures** content; the real ranges are bonds **08:00–09:00** and ES **09:30–10:30**.
+  `london-close-reversal` sold a window ICT demotes by name ("**I lost interest in it**"). Assume
+  the same shape elsewhere in `31-models/`.
 - Remaining corpus (~120 packets) is searchable but uncited. That two-layer state is intended.
 - Layout deviates from the canonical wiki-skill scaffold (kebab-case files, markdown
   relative links, bold-key headers, no `wiki/` wrapper). Deliberate; see `CLAUDE.md`.
