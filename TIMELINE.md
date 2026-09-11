@@ -101,6 +101,15 @@ Refinements of FVG and OB definitions; introduction of OTE and Fibonacci levels;
   "**12 ticks or less** … generally you'll have an **expansion move**"
   (`ICT-2017-BOND-CONSOLIDATION-DAYS` [09:37]). ⚠ The page's 08:00–08:30 "short OR" and its Silver
   Bullet framing were unsourced and are removed. → [ny-am-open-range-model](concepts/31-models/ny-am-open-range-model.md)
+- **Bread and Butter — the May-2017 scalping pair** — ⚠ *re-dated 2023 → 2017 on 2026-09-11 and
+  **rewritten from source**; the page had described a "PM → Asia → London → NY daily delivery
+  sequence" that appears in neither lecture, plus a fabricated "50–60 % of days" statistic.* Lessons
+  6 and 7 of "ICT amplified day trading and scalping": **four price engines** — offset accumulation
+  and reaccumulation for buys (`ICT-2017-BREAD-BUTTER-BUY` [00:40–03:42]), offset distribution and
+  redistribution for sells (`ICT-2017-BREAD-BUTTER-SELL` [00:32–01:11]) — with stated objectives of
+  **15–30 pips, ≤2 hours, M5, 1:1, 0.5–1 % risk** [03:49–05:40]. ⚠ Uses **four** killzones, Asia
+  and London close included, unlike the day-trading model.
+  → [bread-and-butter-setup](concepts/31-models/bread-and-butter-setup.md)
 - **The PM trend and the London close reversal** — ⚠ *`ny-pm-reversal` and `london-close-reversal`
   re-dated 2022 → 2017 on 2026-09-11.* The **PM trend** (13:00–16:00 NY, June 2017 index futures)
   "can be a **continuation** of the AM trend direction **or** an intraday reversal going into the
@@ -235,7 +244,7 @@ Quarterly Theory taught publicly; named models multiply (Unicorn, Diamond, Bread
 - **90-minute-cycle** — smallest fractal time unit operationalized within Quarterly Theory. → [90-minute-cycle](concepts/04-time-cycles/90-minute-cycle.md)
 - **Quarterly Theory deep-dives** — per-level fractal expansion. ⚠ *`true-day-open` and `true-week-open` were removed from this group on 2026-08-10 (second pass) and moved to **2017**, where both pages already said they belonged (named without links on purpose — a link here would count as a placement under that year).* They live in `concepts/22-quarterly-theory/` for filing reasons, and being swept into the Quarterly-Theory year by directory is what produced the mismatch — the levels themselves are taught in Apr and Aug 2017, six years before Quarterly Theory. Their 2023 contribution is a **refinement** (`Year Refined: 2023`), not an introduction. → [quarterly-theory-overview](concepts/22-quarterly-theory/quarterly-theory-overview.md), [yearly-quarters](concepts/22-quarterly-theory/yearly-quarters.md), [monthly-quarters](concepts/22-quarterly-theory/monthly-quarters.md), [weekly-quarters](concepts/22-quarterly-theory/weekly-quarters.md), [daily-quarters](concepts/22-quarterly-theory/daily-quarters.md), [90-minute-quarters](concepts/22-quarterly-theory/90-minute-quarters.md)
 - **ICT 2023 Model** — refines 2022 with QT + macro integration. → [ict-2023-model](concepts/31-models/ict-2023-model.md)
-- **Unicorn / Bread-and-Butter / Diamond** named-model trio. → [unicorn-model](concepts/31-models/unicorn-model.md), [bread-and-butter-setup](concepts/31-models/bread-and-butter-setup.md), [diamond-pattern](concepts/31-models/diamond-pattern.md)
+- **Unicorn / Diamond** named-model pair. ⚠ *`bread-and-butter-setup` was re-dated **2023 → 2017** on 2026-09-11 and moved to that section — ICT teaches it as lessons 6–7 of the **May 2017** mentorship and the page's content matched neither lecture.* ⚠⚠ **Both remaining pages rest on registry stubs** (`ICT-2023-UNICORN`, `ICT-2023-DIAMOND`) and neither concept appears anywhere in the 153-packet corpus, which ends Aug 2017 — they are **unverifiable here**, not confirmed. → [unicorn-model](concepts/31-models/unicorn-model.md), [diamond-pattern](concepts/31-models/diamond-pattern.md)
 - **NDOG / NWOG / Sunday Open Gap** taught. → [ndog](concepts/31-models/ndog.md), [nwog](concepts/31-models/nwog.md), [sunday-open-gap](concepts/31-models/sunday-open-gap.md)
 
 ## 2024 — Refinement & Naming

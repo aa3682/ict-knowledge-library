@@ -218,22 +218,22 @@ unknown. Anything else is an inference dressed as provenance.
 
 ## ICT 2023 Public Lectures
 
-- `ICT-2023-QUARTERLY-THEORY` — Quarterly Theory taught publicly (yearly / monthly / weekly / daily / 90-min quarters).
-- `ICT-2023-UNICORN` — Unicorn Model.
-- `ICT-2023-BREAD-AND-BUTTER` — Bread-and-Butter setup.
-- `ICT-2023-DIAMOND` — Diamond pattern.
-- `ICT-2023-NDOG-NWOG` — New Day / New Week Opening Gap.
+- `ICT-2023-QUARTERLY-THEORY` — Quarterly Theory taught publicly (yearly / monthly / weekly / daily / 90-min quarters). ⚠ **Registry stub — verified 2026-09-11.** No video ID, no quotation, no packet in `raw/`. Sole source for `ict-2023-model` (and the 22-quarterly-theory pages), which are therefore **unverified**, not confirmed. The concept post-dates the local corpus (ends Aug 2017), so it cannot be checked here at all — absence of corpus evidence is **not** evidence the concept is wrong. Compare `ICT-2022-MENTORSHIP-OVERVIEW`.
+- `ICT-2023-UNICORN` — Unicorn Model. ⚠ **Registry stub — verified 2026-09-11.** No video ID, no quotation, no packet in `raw/`. Sole source for `unicorn-model`, which are therefore **unverified**, not confirmed. The concept post-dates the local corpus (ends Aug 2017), so it cannot be checked here at all — absence of corpus evidence is **not** evidence the concept is wrong. Compare `ICT-2022-MENTORSHIP-OVERVIEW`.
+- `ICT-2023-BREAD-AND-BUTTER` — Bread-and-Butter setup. ⚠⚠ **Superseded 2026-09-11 and now uncited.** It was a registry stub, and the setup it stood for is taught in **May 2017** as lessons 6–7 of the mentorship — see `ICT-2017-BREAD-BUTTER-BUY` / `ICT-2017-BREAD-BUTTER-SELL`, which carry video IDs and timestamps. Retained (IDs are append-only) but **do not cite it**.
+- `ICT-2023-DIAMOND` — Diamond pattern. ⚠ **Registry stub — verified 2026-09-11.** No video ID, no quotation, no packet in `raw/`. Sole source for `diamond-pattern`, which are therefore **unverified**, not confirmed. The concept post-dates the local corpus (ends Aug 2017), so it cannot be checked here at all — absence of corpus evidence is **not** evidence the concept is wrong. Compare `ICT-2022-MENTORSHIP-OVERVIEW`.
+- `ICT-2023-NDOG-NWOG` — New Day / New Week Opening Gap. ⚠ **Registry stub — verified 2026-09-11.** No video ID, no quotation, no packet in `raw/`. Sole source for `ndog`, `nwog`, `sunday-open-gap`, which are therefore **unverified**, not confirmed. The concept post-dates the local corpus (ends Aug 2017), so it cannot be checked here at all — absence of corpus evidence is **not** evidence the concept is wrong. Compare `ICT-2022-MENTORSHIP-OVERVIEW`.
 
 ## ICT 2024 Refinements
 
 - `ICT-2024-IFVG-FORMALIZED` — Inversion FVG terminology standardized.
 - `ICT-2024-FVG-CLASSIFICATION` — immediate vs delayed rebalance distinction.
 - `ICT-2024-PROPULSION-BLOCKS` — propulsion block re-teach (mentorship module).
-- `ICT-2024-MENTORSHIP-MODULE-LIST` — 2024 mentorship cycle overview.
+- `ICT-2024-MENTORSHIP-MODULE-LIST` — 2024 mentorship cycle overview. ⚠ **Registry stub — verified 2026-09-11.** No video ID, no quotation, no packet in `raw/`. Sole source for `ict-2024-model`, which are therefore **unverified**, not confirmed. The concept post-dates the local corpus (ends Aug 2017), so it cannot be checked here at all — absence of corpus evidence is **not** evidence the concept is wrong. Compare `ICT-2022-MENTORSHIP-OVERVIEW`.
 
 ## ICT 2025
 
-- `ICT-2025-VENOM` — April 3 2025: Venom Model release video.
+- `ICT-2025-VENOM` — April 3 2025: Venom Model release video. ⚠ **Registry stub — verified 2026-09-11.** No video ID, no quotation, no packet in `raw/`. Sole source for `venom-model`, which are therefore **unverified**, not confirmed. The concept post-dates the local corpus (ends Aug 2017), so it cannot be checked here at all — absence of corpus evidence is **not** evidence the concept is wrong. Compare `ICT-2022-MENTORSHIP-OVERVIEW`.
 - `ICT-2025-FOMC-2STAGE` — September 2025: Trading FOMC Two-Stage Delivery.
 - `ICT-2025-ADV-LIQUIDITY` — October 11 2025: Advanced Liquidity Concepts lecture (PD-array nesting, IPDA quarterly check-ins).
 - `ICT-2025-CE-PRIMARY-ENTRY` — multiple 2025 videos reinforcing CE as the algorithmic entry zone.

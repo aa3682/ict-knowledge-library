@@ -2,7 +2,7 @@
 
 **Category:** 31-models
 **Aliases:** ICT Unicorn, the Unicorn, unicorn setup
-**ICT Confidence:** high
+**ICT Confidence:** medium
 **Year Introduced:** 2023
 **Year Refined:** 2023
 **Source IDs:** ICT-2023-UNICORN
@@ -45,7 +45,7 @@ unicorn(zone):
     {"id": "c2", "expr": "all 4 confluence layers required"}
   ],
   "timeframes": ["M15","H1","H4"],
-  "confidence": "high",
+  "confidence": "medium",
   "year_introduced": "2023",
   "year_refined": "2023",
   "related": ["ict-2022-model","ict-2023-model","breaker-block","fair-value-gap","nested-fvg","htf-bias-framework","liquidity-sweep","pd-array-confluence"],
@@ -96,3 +96,9 @@ M15+. HTF Unicorns (H4, D) are the most-cited variant.
 ## Citations
 
 - `ICT-2023-UNICORN`.
+- ⚠ **`ICT-2023-UNICORN` is a registry stub** — no video ID, no quotation, no packet in `raw/`
+  (verified 2026-09-11). Nothing on this page can be checked against a lecture. The concept
+  post-dates the local corpus, which ends Aug 2017, so **absence of corpus evidence is not
+  evidence against it** — but the specifics here are the 2026-05 build's reconstruction, not
+  quoted teaching. `ICT Confidence` lowered **high → medium** on 2026-09-11 under the rule applied
+  to `ict-2022-model`: stub-only sourcing is the taxonomy's "limited public sourcing".

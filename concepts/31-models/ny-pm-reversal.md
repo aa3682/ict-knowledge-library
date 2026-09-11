@@ -107,7 +107,7 @@ M5 / M15 / H1.
 ## Common Mistakes
 
 - **Forcing PM reversal on every clean AM.** When HTF is strongly trending, NY PM often continues; reversal is more typical when AM was over-extended.
-- **Lunch fade.** Don't trade the lunch consolidation itself; wait for the PM macro window 13:50+ for the actual reversal trigger.
+- **Lunch fade.** Don't trade the lunch consolidation itself. ICT's stated timing is that "typically **2 pm** New York time sees the move begin", though it can start as early as 1 pm (`ICT-2017-INDEX-PM-TREND`, 01:59–02:06). ⚠ This bullet previously named a **macro window** — 2022 vocabulary on 2017 content, and unsourced.
 
 ## Related Concepts
 

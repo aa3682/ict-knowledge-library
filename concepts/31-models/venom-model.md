@@ -2,7 +2,7 @@
 
 **Category:** 31-models
 **Aliases:** ICT Venom, Venom setup
-**ICT Confidence:** high
+**ICT Confidence:** medium
 **Year Introduced:** 2025
 **Year Refined:** 2025
 **Source IDs:** ICT-2025-VENOM
@@ -51,7 +51,7 @@ venom_setup:
     {"id": "c3", "expr": "primarily US indices (NQ, ES, YM)"}
   ],
   "timeframes": ["M1","M5","M15"],
-  "confidence": "high",
+  "confidence": "medium",
   "year_introduced": "2025",
   "year_refined": "2025",
   "related": ["ict-2022-model","ict-2024-model","silver-bullet-ny-am","ny-am-open-range-model","power-of-three","liquidity-sweep","ny-am-killzone"],
@@ -102,3 +102,9 @@ M1 / M5 / M15.
 ## Citations
 
 - `ICT-2025-VENOM` — ICT's April 3 2025 release video.
+- ⚠ **`ICT-2025-VENOM` is a registry stub** — no video ID, no quotation, no packet in `raw/`
+  (verified 2026-09-11). Nothing on this page can be checked against a lecture. The concept
+  post-dates the local corpus, which ends Aug 2017, so **absence of corpus evidence is not
+  evidence against it** — but the specifics here are the 2026-05 build's reconstruction, not
+  quoted teaching. `ICT Confidence` lowered **high → medium** on 2026-09-11 under the rule applied
+  to `ict-2022-model`: stub-only sourcing is the taxonomy's "limited public sourcing".

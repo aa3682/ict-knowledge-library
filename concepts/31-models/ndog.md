@@ -2,7 +2,7 @@
 
 **Category:** 31-models
 **Aliases:** NDOG, midnight gap, daily open gap
-**ICT Confidence:** high
+**ICT Confidence:** medium
 **Year Introduced:** 2023
 **Year Refined:** 2024
 **Source IDs:** ICT-2023-NDOG-NWOG
@@ -48,7 +48,7 @@ ndog_dir    = "bullish" if tdo > prior_close else "bearish"
     {"id": "c3", "expr": "tendency to fill within same day"}
   ],
   "timeframes": ["M15","H1","H4","D"],
-  "confidence": "high",
+  "confidence": "medium",
   "year_introduced": "2023",
   "year_refined": "2024",
   "related": ["nwog","sunday-open-gap","true-day-open","vacuum-block","time-of-day-pivots"],
@@ -97,3 +97,9 @@ M15 / H1 / H4 / D.
 ## Citations
 
 - `ICT-2023-NDOG-NWOG`.
+- ⚠ **`ICT-2023-NDOG-NWOG` is a registry stub** — no video ID, no quotation, no packet in `raw/`
+  (verified 2026-09-11). Nothing on this page can be checked against a lecture. The concept
+  post-dates the local corpus, which ends Aug 2017, so **absence of corpus evidence is not
+  evidence against it** — but the specifics here are the 2026-05 build's reconstruction, not
+  quoted teaching. `ICT Confidence` lowered **high → medium** on 2026-09-11 under the rule applied
+  to `ict-2022-model`: stub-only sourcing is the taxonomy's "limited public sourcing".

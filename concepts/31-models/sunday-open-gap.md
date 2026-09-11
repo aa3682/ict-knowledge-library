@@ -2,7 +2,7 @@
 
 **Category:** 31-models
 **Aliases:** Sunday gap, weekly open gap, SOG
-**ICT Confidence:** high
+**ICT Confidence:** medium
 **Year Introduced:** 2023
 **Year Refined:** 2024
 **Source IDs:** ICT-2023-NDOG-NWOG
@@ -46,7 +46,7 @@ key_levels:
     {"id": "c3", "expr": "Monday London open often raids the Sunday-Monday range"}
   ],
   "timeframes": ["M15","H1","H4"],
-  "confidence": "high",
+  "confidence": "medium",
   "year_introduced": "2023",
   "year_refined": "2024",
   "related": ["nwog","ndog","true-week-open","vacuum-block","asian-range","london-open-killzone"],
@@ -95,3 +95,9 @@ M15–H4.
 ## Citations
 
 - `ICT-2023-NDOG-NWOG`.
+- ⚠ **`ICT-2023-NDOG-NWOG` is a registry stub** — no video ID, no quotation, no packet in `raw/`
+  (verified 2026-09-11). Nothing on this page can be checked against a lecture. The concept
+  post-dates the local corpus, which ends Aug 2017, so **absence of corpus evidence is not
+  evidence against it** — but the specifics here are the 2026-05 build's reconstruction, not
+  quoted teaching. `ICT Confidence` lowered **high → medium** on 2026-09-11 under the rule applied
+  to `ict-2022-model`: stub-only sourcing is the taxonomy's "limited public sourcing".

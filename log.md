@@ -6,6 +6,54 @@ Per the Karpathy LLM Wiki pattern, this file complements [`INDEX.md`](INDEX.md) 
 
 ---
 
+## [2026-09-11] fix | 31-models swept. The stub problem is 21% of the registry, and bread-and-butter did not describe its own subject.
+
+The folder splits cleanly: **18 corpus-distilled pages (146–305L, quoted + timestamped) had zero
+defects; all 11 original-build synthetics (81–145L) rest on a registry stub and every defect is in
+that cohort.** The distinguishing feature is not the year or the topic — it is whether a human ever
+read a transcript for the page.
+
+⚠⚠ **`ICT-2022-MENTORSHIP-OVERVIEW` was not special. 39 of 190 Source IDs (21 %) are registry
+stubs** — no video ID, no timestamp, no packet. In `31-models/`, 11 of 29 pages cite one and nothing
+else.
+
+⚠⚠ **`bread-and-butter-setup` did not describe its own subject.** Two dedicated lectures sit in the
+corpus with **already-registered** IDs (`ICT-2017-BREAD-BUTTER-BUY` / `-SELL`) and the page cited
+neither. It claimed a "recurring daily delivery sequence" (PM → Asia → London → NY AM) executed with
+"standard 2022/2023 model rules", dated 2023, including a **fabricated "roughly 50–60 % of days"**
+statistic. The lectures teach a **scalping** pair — lessons 6–7 of **May 2017** — whose content is
+**four price engines**: offset accumulation / reaccumulation for buys, offset distribution /
+redistribution for sells, with stated objectives of 15–30 pips, ≤2 h, M5, **1:1**, 0.5–1 % risk.
+**Rewritten from source**, re-dated 2023 → 2017, moved in TIMELINE.
+
+⚠ **Incidental, with wider reach:** the scalping lesson uses **four** killzones — "one in London,
+one in New York, one in **London close** and one in **Asia**" — against the day-trading model's two.
+**Scalping and day-trading have different session sets**, which no page had recorded. Bears on the
+`ict-2022-model` killzone question still open.
+
+⚠ **The anachronism scan caught a miss in my own work from three hours earlier.** `ny-pm-reversal`
+still said "wait for the PM **macro window** 13:50+" — 2022 vocabulary on 2017 content, unsourced,
+left behind when I removed the Silver Bullet framing. Replaced with ICT's own timing (2 pm,
+`ICT-2017-INDEX-PM-TREND` 01:59). The other 27 pages are clean on that axis.
+
+**Unverifiable cohort marked, not invented.** `diamond`, `unicorn`, NDOG/NWOG and `venom` return
+**zero** corpus hits — the corpus ends Aug 2017 and they post-date it. 7 stubs marked ⚠ in
+`SOURCES.md` with their dependent pages and the explicit caveat that **absence of corpus evidence is
+not evidence against the concept**. 6 pages re-graded **`high` → `medium`** under the rule approved
+for `ict-2022-model`. `ICT-2023-BREAD-AND-BUTTER` marked superseded and do-not-cite.
+
+`timeline_placement`, added earlier today, caught the bread-and-butter re-date within one run.
+
+⚠ **Open:** the other 28 stub-only pages outside `31-models/` — `22-quarterly-theory` leans on a
+stub now marked. Prioritise wherever a real corpus lecture exists; those are recoverable. And a
+**`stub-only` lint check** would make this mechanical — it would have surfaced all 11 without a
+manual pass. Not built.
+
+Report: [`meta/lint-report-2026-09-11-e.md`](meta/lint-report-2026-09-11-e.md). `tools/lint.py`:
+287 pages, 191 source ids, 0 problems, 3 warnings.
+
+---
+
 ## [2026-09-11] meta | hot.md rewritten to budget: 968 → 532 words
 
 The hot cache had been appended to rather than rewritten and had drifted to **968 words against

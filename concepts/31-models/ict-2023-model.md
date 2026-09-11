@@ -2,7 +2,7 @@
 
 **Category:** 31-models
 **Aliases:** ICT 2023 setup, 2023 refined model
-**ICT Confidence:** high
+**ICT Confidence:** medium
 **Year Introduced:** 2023
 **Year Refined:** 2023
 **Source IDs:** ICT-2023-QUARTERLY-THEORY
@@ -45,7 +45,7 @@ ict_2023_model :=
     {"id": "c3", "expr": "adds_macro_time_integration"}
   ],
   "timeframes": ["M5","M15","H1","H4"],
-  "confidence": "high",
+  "confidence": "medium",
   "year_introduced": "2023",
   "year_refined": "2023",
   "related": ["ict-2022-model","ict-2024-model","quarterly-shift-theory","90-minute-cycle","macro-times-overview","nested-fvg","silver-bullet-overview"],
@@ -97,3 +97,9 @@ M5–H4.
 ## Citations
 
 - `ICT-2023-QUARTERLY-THEORY`.
+- ⚠ **`ICT-2023-QUARTERLY-THEORY` is a registry stub** — no video ID, no quotation, no packet in
+  `raw/` (verified 2026-09-11). Nothing on this page can be checked against a lecture. The concept
+  post-dates the local corpus, which ends Aug 2017, so **absence of corpus evidence is not
+  evidence against it** — but the specifics here are the 2026-05 build's reconstruction, not
+  quoted teaching. `ICT Confidence` lowered **high → medium** on 2026-09-11 under the rule applied
+  to `ict-2022-model`: stub-only sourcing is the taxonomy's "limited public sourcing".

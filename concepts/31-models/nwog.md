@@ -2,7 +2,7 @@
 
 **Category:** 31-models
 **Aliases:** NWOG, weekly gap, weekend gap
-**ICT Confidence:** high
+**ICT Confidence:** medium
 **Year Introduced:** 2023
 **Year Refined:** 2024
 **Source IDs:** ICT-2023-NDOG-NWOG
@@ -47,7 +47,7 @@ nwog_dir  = "bullish" if weekend_open > friday_close else "bearish"
     {"id": "c3", "expr": "tendency to fill within first 1-2 trading days"}
   ],
   "timeframes": ["H1","H4","D"],
-  "confidence": "high",
+  "confidence": "medium",
   "year_introduced": "2023",
   "year_refined": "2024",
   "related": ["ndog","sunday-open-gap","true-week-open","vacuum-block","time-of-day-pivots"],
@@ -99,3 +99,9 @@ H1 / H4 / D.
 ## Citations
 
 - `ICT-2023-NDOG-NWOG`.
+- ⚠ **`ICT-2023-NDOG-NWOG` is a registry stub** — no video ID, no quotation, no packet in `raw/`
+  (verified 2026-09-11). Nothing on this page can be checked against a lecture. The concept
+  post-dates the local corpus, which ends Aug 2017, so **absence of corpus evidence is not
+  evidence against it** — but the specifics here are the 2026-05 build's reconstruction, not
+  quoted teaching. `ICT Confidence` lowered **high → medium** on 2026-09-11 under the rule applied
+  to `ict-2022-model`: stub-only sourcing is the taxonomy's "limited public sourcing".
