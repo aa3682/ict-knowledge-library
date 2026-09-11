@@ -70,12 +70,20 @@ resolved: **17 new concept pages, 6 refinements of existing pages, 3 dating corr
 - **Lint is now `tools/lint.py`**, not a re-typed one-liner. It gained header↔JSON checks for
   **sources** and **year** after three pages were found with headers that disagreed with their
   JSON — an edit-shape failure no existing check could see. Run it before every commit.
-- ⚠ **OPEN (2026-09-11): `ict-2022-model` states its killzone rule twice, incompatibly.**
-  Formal Criteria step 2 names three windows (London Open / NY AM / London Close); Common
-  Mistakes bullet 3 says "any killzone / DOL combination." Exhaustive whitelist, or
-  illustrative list? Needs `ICT-2022-MENTORSHIP-OVERVIEW` re-read — a lint pass should not
-  decide doctrine. Same page has **no MSS step** anywhere; chain is sweep → displacement
-  (FVG forms) → CE retest. Both flagged, neither actioned.
+- ⚠⚠ **`ICT-2022-MENTORSHIP-OVERVIEW` IS A REGISTRY STUB (2026-09-11).** No video ID, date,
+  quotation or `raw/` packet — same failure mode as `ICT-2018-BLOCKS`. **172 pages cite it;
+  153 also carry a real source, but 7 rest on it alone** — `ict-2022-model` (fixed),
+  `london-close-reversal`, `ny-am-open-range-model`, `ny-pm-reversal`, `range-expansion`,
+  `external-range-liquidity`, `internal-range-liquidity`. **The six untouched need their own
+  source checks** — three are `31-models/` pages, a build-artifact shape. The
+  `ICT-2022-MENTORSHIP-CORE-CONTENT-*` packets are **not** this ID's content; they are the
+  2016–2017 mentorship under their own IDs.
+- **Killzone contradiction CLOSED** on `ict-2022-model`: three-window list stands, "any
+  killzone" was wrong, windows are **tiered** (London open + NY open primary; London close =
+  bank positions / longer-term entry only; Asia + post-noon out). Clock set left UNRESOLVED —
+  public `02:00` vs mentorship `01:00`, which ICT rejects by name. Open for the owner: the page
+  still reads `ICT Confidence: high` on an unreadable citation; **recommend `medium`**.
+  Still unactioned: the page has **no MSS step**; chain is sweep → displacement (FVG) → CE.
 - Remaining corpus (~120 packets) is searchable but uncited. That two-layer state is intended.
 - Layout deviates from the canonical wiki-skill scaffold (kebab-case files, markdown
   relative links, bold-key headers, no `wiki/` wrapper). Deliberate; see `CLAUDE.md`.

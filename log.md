@@ -6,6 +6,49 @@ Per the Karpathy LLM Wiki pattern, this file complements [`INDEX.md`](INDEX.md) 
 
 ---
 
+## [2026-09-11] fix | The 2022 Model's source does not exist. Contradiction resolved against the corpus; 7 pages found resting on the stub.
+
+Follow-up to this morning's lint (below), which left the killzone contradiction open pending a
+source read. **The source cannot be read: `ICT-2022-MENTORSHIP-OVERVIEW` is a registry stub** — no
+video ID, no date, no quotation, no packet in `raw/`, sitting beside the `ICT-2022-E01`–`E12`
+placeholders. Same failure mode as `ICT-2018-BLOCKS` (2026-08-11). Marked ⚠⚠ in `SOURCES.md`.
+
+The 120+ `ICT-2022-MENTORSHIP-CORE-CONTENT-*` packets in `raw/` are **not** this ID's content —
+they are the 2016–2017 mentorship re-uploaded, already cited under their own IDs.
+
+**Contradiction resolved against the corpus: the three-window list stands, "any killzone" was
+wrong.** Nothing treats the five killzones as interchangeable, and two sources contradict it:
+London open and NY open are "the **two dominant high volume times of the day**"
+(`ICT-2017-DAYTRADE-ROUTINE` 00:23–02:23); London close is demoted by name — "I **lost interest in
+it** … doesn't give me enough of a payment", it is where "we **really bank our positions**", an
+entry only for longer-term trades (`ICT-2017-DAYTRADE-ESSENTIALS` 14:31–15:28); Asia is "**very
+small little setups**" and past noon "you're done" (16:18–17:17). The windows are a **tier, not a
+flat whitelist** — now JSON `c4`, a Formal Criteria note, and a Common Mistakes bullet.
+
+⚠ **This morning's pass is partly corrected.** It wrote "public / 2016+2022 set" into step 2 and
+hardened those times into JSON `c3`. The times match `killzone-overview`, but the **attribution was
+an inference on the contested half of a conflict the vault already documents** — the mentorship set
+is London `01:00-05:00` / NY `07:00-10:00`, and ICT rejects the 02:00 start by name there
+(`ICT-2017-DEFINING-DAILY-RANGE` 08:16, framed as "the definitive teaching"). Asserting a guess in
+machine-readable form was the opposite of that pass's purpose. Attribution withdrawn; `c5` records
+the clock set as UNRESOLVED and names both candidates.
+
+**Blast radius surveyed. 172 of 287 pages cite the stub; 153 also carry a real source (cosmetic),
+but 7 rest on it alone:** `ict-2022-model` (handled), `london-close-reversal`,
+`ny-am-open-range-model`, `ny-pm-reversal`, `range-expansion`, `external-range-liquidity`,
+`internal-range-liquidity`. Three of the six untouched are `31-models/` pages — a build artifact
+shape, not six coincidences. **Each needs its own source check; not attempted here.**
+`ICT-2022-E01`–`E12`: zero citations, inert.
+
+Open for the owner: `ict-2022-model` still carries **`ICT Confidence: high`** on an unreadable
+citation. Recommend **`medium`** (limited public sourcing). Not applied — page-level grading is not
+a lint fix.
+
+Report: [`meta/lint-report-2026-09-11-b.md`](meta/lint-report-2026-09-11-b.md). `tools/lint.py`:
+287 pages, 191 source ids, 0 problems.
+
+---
+
 ## [2026-09-11] lint | 2022 Model killzones were prose-only; now in the JSON. One contradiction left open.
 
 A query for the 2022 Model's exact killzone windows could not be answered from
