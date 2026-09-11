@@ -6,6 +6,49 @@ Per the Karpathy LLM Wiki pattern, this file complements [`INDEX.md`](INDEX.md) 
 
 ---
 
+## [2026-09-11] lint | stub_only added. 137 of 287 pages — 48% of the vault — cannot be checked against any lecture.
+
+⚠⚠ **This entry corrects two numbers I logged earlier today. Both understated the problem.**
+
+- "39 of 190 Source IDs (21 %) are stubs" → **36 of 191 carry no locator at all (19 %)**, plus 4
+  with a date but no video ID. The earlier count included entries whose only "date" was **my own ⚠
+  annotation added hours before**. The grader now reads the source description only, up to the
+  first ⚠.
+- "28 stub-only pages outside `31-models/`" → **137 of 287 vault-wide, 48 %**. That was a
+  *definitional* error, not arithmetic: I counted pages whose sources were all in a hand-written
+  list of stubs I already knew about. **The list was never the population.** Measuring the actual
+  property gives nearly five times my estimate.
+
+The hazard this whole day has been about, reproduced in my own reporting: **a number that agrees
+with itself across several surfaces is not thereby verified.**
+
+**The check.** `stub_only` flags a page every one of whose Source IDs carries **no locator** — no
+video ID, no timestamp. Grading: **strong 150** (quotable), **weak 4** (date only), **none 36**
+(registry stub). Two design calls: umbrella tags (`SMC-COMMUNITY-LEXICON`) are exempt, since there
+is deliberately nothing to locate; and **unknown IDs default to stub** — before hardening, the one
+unparseable range entry (`ICT-2022-E01` through `E12`) returned `None`, not `"none"`, so a page
+citing only such IDs would have **escaped a check whose entire purpose is to stop silent passes**.
+Output is summarised by directory; 137 lines would bury the other warnings. `--stub-only` lists them.
+
+Mutation-tested: reverting `bread-and-butter-setup` to its stub citation is caught; restoring
+silences it.
+
+**137 is not 137 wrong pages — it is 137 whose correctness is unknown.** Two populations inside it:
+**recoverable** (real lectures sit in `raw/` and the page cites a stub instead — FVG, order blocks,
+MSS, killzones, PO3, Asian range, displacement all have dedicated lectures; `bread-and-butter` was
+exactly this and turned out to describe the wrong thing entirely), and **genuinely unverifiable**
+(post-Aug-2017 concepts — Silver Bullet, macros, Quarterly Theory, CRT, NDOG/NWOG), which can only
+be marked as `31-models/` was.
+
+⚠ **`problems: 0` does not mean the vault is fine.** It means the structure is sound. Roughly half
+the content is unverified, and `stub_only` is now the number that says so. Next pass: split the 137
+by corpus coverage, work the recoverable bucket foundations-first. That is a programme, not a task.
+
+Report: [`meta/lint-report-2026-09-11-f.md`](meta/lint-report-2026-09-11-f.md). `tools/lint.py`:
+287 pages, 191 source ids, 0 problems, 4 warnings.
+
+---
+
 ## [2026-09-11] fix | 31-models swept. The stub problem is 21% of the registry, and bread-and-butter did not describe its own subject.
 
 The folder splits cleanly: **18 corpus-distilled pages (146–305L, quoted + timestamped) had zero

@@ -27,6 +27,19 @@ citations because their only source was a registry stub:
     Source IDs carry a legacy year that disagrees with the material (SOURCES.md documents
     these). Stub and placeholder IDs are excluded outright — their year means nothing.
 
+  * `stub_only`      — a page every one of whose Source IDs is a *registry stub*: an entry in
+    SOURCES.md carrying no locator at all — no video ID, no timestamp. Nothing on such a page
+    can be checked against a lecture. This is the check that would have found
+    `bread-and-butter-setup`, whose two real lectures were already registered while the page
+    cited a stub instead.
+
+    Locator strength is graded on the source description only, up to the first "⚠" — our own
+    annotations carry dates ("verified 2026-09-11") and would otherwise read as locators.
+    Entries that are umbrella tags by design, not claims about one lecture, are exempt.
+
+    Summarised by directory by default, since ~half the vault currently trips it and 137
+    individual lines would bury every other warning. Pass --stub-only to list the pages.
+
   * `timeline_placement` — AGENTS.md → Lint step 4 ("every concept file appears under its
     `Year Introduced` heading") had no implementation, so every re-dating pass silently
     desynced TIMELINE.md from the pages. Two re-dates on 2026-09-11 broke placement with
@@ -65,6 +78,16 @@ UNDATED_SOURCES = {
     "ICT-2018-BLOCKS",
 } | {f"ICT-2022-E{n:02d}" for n in range(1, 13)}
 
+# Source IDs that are umbrella tags rather than a claim about one identifiable lecture. Not
+# stubs: there is deliberately nothing to locate.
+UMBRELLA_SOURCES = {
+    "SMC-COMMUNITY-LEXICON",
+}
+
+MONTHS = (
+    "January|February|March|April|May|June|July|August|September|October|November|December"
+)
+
 REQUIRED_FIELDS = [
     "**Category:**",
     "**Aliases:**",
@@ -85,10 +108,35 @@ def source_ids() -> set[str]:
     return set(re.findall(r"^- `([A-Z0-9\-]+)`", text, re.M))
 
 
+def locator_strength() -> dict[str, str]:
+    """Map each Source ID to how precisely it can be located.
+
+    strong — an 11-char video ID or an [MM:SS] timestamp: quotable.
+    weak   — a date but no video ID: findable by hand, not quotable.
+    none   — a bare gloss: a registry stub, unverifiable.
+    """
+    out: dict[str, str] = {}
+    for line in (ROOT / "SOURCES.md").read_text(encoding="utf-8").splitlines():
+        match = re.match(r"^- `([A-Z0-9\-]+)` — (.*)$", line)
+        if not match:
+            continue
+        sid, body = match.groups()
+        body = body.split("\u26a0")[0]  # grade the source, not our own ⚠ annotations
+        if re.search(r"`[A-Za-z0-9_\-]{11}`", body) or re.search(r"\[\d{2}:\d{2}", body):
+            out[sid] = "strong"
+        elif re.search(rf"(?:{MONTHS})\s+\d|\b(?:19|20)\d{{2}}-\d{{2}}-\d{{2}}\b", body):
+            out[sid] = "weak"
+        else:
+            out[sid] = "none"
+    return out
+
+
 def main() -> int:
     files = concept_files()
     ids = {p.stem for p in files}
     known_sources = source_ids()
+    strength = locator_strength()
+    stub_only: list[str] = []
     index = (ROOT / "INDEX.md").read_text(encoding="utf-8")
     problems: list[str] = []
     warnings: list[str] = []
@@ -160,6 +208,15 @@ def main() -> int:
                 f"year_introduced {blob.get('year_introduced')}"
             )
 
+        # stub_only — see the module docstring.
+        locatable = [s for s in header_sources if s not in UMBRELLA_SOURCES]
+        # Default unknown to "none": a Source ID the grader cannot parse (SOURCES.md has one
+        # range entry, "ICT-2022-E01 through ICT-2022-E12") is by definition not locatable, and
+        # failing toward flagging is the safe direction. Genuinely missing IDs are a problem,
+        # caught above by the unknown-source-id check.
+        if locatable and all(strength.get(s, "none") == "none" for s in locatable):
+            stub_only.append(rel)
+
         # years_vs_citations — see the module docstring. Compares the declared year against
         # the years the page's own Source IDs encode, ignoring stubs and placeholders.
         dated = []
@@ -229,6 +286,17 @@ def main() -> int:
             )
 
     print(f"{len(files)} concept pages, {len(known_sources)} source ids")
+    if stub_only:
+        by_dir: dict[str, int] = {}
+        for rel in stub_only:
+            by_dir[rel.split("/")[1]] = by_dir.get(rel.split("/")[1], 0) + 1
+        listed = ", ".join(f"{d} x{n}" for d, n in sorted(by_dir.items()))
+        warn(
+            f"stub_only: {len(stub_only)} of {len(files)} pages cite no source carrying a "
+            f"video ID or timestamp — nothing on them can be checked against a lecture "
+            f"({listed}). Re-run with --stub-only to list them."
+        )
+
     print(f"problems: {len(problems)}")
     for problem in problems:
         print(f"  {problem}")
@@ -239,4 +307,15 @@ def main() -> int:
 
 
 if __name__ == "__main__":
+    if "--stub-only" in sys.argv:
+        _strength = locator_strength()
+        for _f in concept_files():
+            _m = re.search(r"\*\*Source IDs:\*\* (.+)", _f.read_text(encoding="utf-8"))
+            if not _m:
+                continue
+            _ids = [s.strip() for s in _m.group(1).split(",") if s.strip()]
+            _ids = [s for s in _ids if s not in UMBRELLA_SOURCES]
+            if _ids and all(_strength.get(s, "none") == "none" for s in _ids):
+                print(f"{_f.relative_to(ROOT).as_posix()}  <- {', '.join(_ids)}")
+        sys.exit(0)
     sys.exit(main())
