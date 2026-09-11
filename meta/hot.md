@@ -67,9 +67,16 @@ resolved: **17 new concept pages, 6 refinements of existing pages, 3 dating corr
   - *`ny-judas-swing` / `judas-swing-failure` at 2018* — **confirmed, not changed.** All 16
     corpus files mentioning "Judas" attach the label to the London/after-midnight protraction
     only. The absence is sourced against the enumerated population.
-- **Lint is now `tools/lint.py`**, not a re-typed one-liner. It gained header↔JSON checks for
-  **sources** and **year** after three pages were found with headers that disagreed with their
-  JSON — an edit-shape failure no existing check could see. Run it before every commit.
+- **Lint is now `tools/lint.py`**, not a re-typed one-liner. Run it before every commit.
+  It gained header↔JSON checks for **sources** and **year** (2026-08-10), then **2026-09-11**
+  two checks that read a page against *evidence* rather than against another copy of itself:
+  **`years_vs_citations`** (declared year vs the years its own Source IDs encode, stubs excluded)
+  and **`timeline_placement`** (AGENTS.md lint step 4, which had never been implemented). Both are
+  **warnings — exit stays 0**; a year mismatch needs judgment, not a red build. Currently
+  **3 warnings, all triaged as expected** (`crt-vs-amd` is a comparison page; `smt-failure` and
+  `cpi-protocol` are documented open questions). ⚠ There is **no acknowledgement mechanism**, so
+  those 3 recur every run — recommend an in-page `lint: expected` marker before the noise gets
+  ignored.
 - ⚠⚠ **`ICT-2022-MENTORSHIP-OVERVIEW` IS A REGISTRY STUB (2026-09-11).** No video ID, date,
   quotation or `raw/` packet — same failure mode as `ICT-2018-BLOCKS`. **172 pages cite it;
   153 also carry a real source.** ✅ **All 7 that rested on it alone are resolved (2026-09-11):

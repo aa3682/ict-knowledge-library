@@ -12,7 +12,28 @@ failures got through:
     two lists.
   * `years_agree`    — `**Year Introduced:**` must equal JSON `year_introduced`.
 
-Exit status is non-zero if anything fails, so this is CI-safe.
+And one added 2026-09-11, after six pages were found dated 2022 against 2016/2017
+citations because their only source was a registry stub:
+
+  * `years_vs_citations` — `**Year Introduced:**` is compared against the years encoded
+    in the page's own Source IDs. The three surface-agreement checks above all pass when
+    every surface carries the *same wrong year*, which is exactly what a stub-sourced
+    page looks like. This is the first check that reads the year against evidence rather
+    than against another copy of itself.
+
+    Reported as WARNINGS, not problems: a mismatch needs human judgment and is not always
+    a defect. A comparison page (`<a>-vs-<b>.md`) is legitimately dated by its newer
+    concept while citing an older source for the thing being compared against, and some
+    Source IDs carry a legacy year that disagrees with the material (SOURCES.md documents
+    these). Stub and placeholder IDs are excluded outright — their year means nothing.
+
+  * `timeline_placement` — AGENTS.md → Lint step 4 ("every concept file appears under its
+    `Year Introduced` heading") had no implementation, so every re-dating pass silently
+    desynced TIMELINE.md from the pages. Two re-dates on 2026-09-11 broke placement with
+    nothing to catch it. Also a warning: TIMELINE lists many pages inside grouped bullets,
+    and a page may legitimately be named in a later year's section as a refinement.
+
+Exit status is non-zero if anything fails, so this is CI-safe. Warnings do not affect it.
 """
 from __future__ import annotations
 
@@ -35,6 +56,14 @@ REQUIRED_SECTIONS = [
     "## Related Concepts",
     "## Citations",
 ]
+
+# Source IDs whose encoded year is not evidence of anything. These are registry stubs and
+# placeholders — no video ID, no date, no quotation behind them. Including their year is how
+# six pages came to be dated 2022 against 2016/2017 material. See SOURCES.md for each.
+UNDATED_SOURCES = {
+    "ICT-2022-MENTORSHIP-OVERVIEW",
+    "ICT-2018-BLOCKS",
+} | {f"ICT-2022-E{n:02d}" for n in range(1, 13)}
 
 REQUIRED_FIELDS = [
     "**Category:**",
@@ -62,9 +91,13 @@ def main() -> int:
     known_sources = source_ids()
     index = (ROOT / "INDEX.md").read_text(encoding="utf-8")
     problems: list[str] = []
+    warnings: list[str] = []
 
     def bad(msg: str) -> None:
         problems.append(msg)
+
+    def warn(msg: str) -> None:
+        warnings.append(msg)
 
     for f in files:
         rel = f.relative_to(ROOT).as_posix()
@@ -127,6 +160,38 @@ def main() -> int:
                 f"year_introduced {blob.get('year_introduced')}"
             )
 
+        # years_vs_citations — see the module docstring. Compares the declared year against
+        # the years the page's own Source IDs encode, ignoring stubs and placeholders.
+        dated = []
+        for sid in header_sources:
+            if sid in UNDATED_SOURCES:
+                continue
+            year_match = re.match(r"^[A-Z]+-(\d{4})-", sid)
+            if year_match:
+                dated.append((int(year_match.group(1)), sid))
+        if dated:
+            earliest_year, earliest_id = min(dated)
+            declared = int(header_year)
+            if declared > earliest_year:
+                # A disambiguation page is dated by the newer of the two concepts it
+                # separates, while citing an older source for the other one. Expected, not a
+                # defect — flagged with a hint rather than suppressed, so a real mis-dating on
+                # a comparison page still surfaces.
+                hint = (
+                    " (comparison page — expected if dated by the newer concept)"
+                    if "-vs-" in f.stem
+                    else " — dated off a stub?"
+                )
+                warn(
+                    f"{rel}: Year Introduced {declared} is later than its earliest citation "
+                    f"{earliest_year} ({earliest_id}){hint}"
+                )
+            elif declared < earliest_year:
+                warn(
+                    f"{rel}: Year Introduced {declared} predates every citation "
+                    f"(earliest {earliest_year}, {earliest_id}) — introduction unsourced?"
+                )
+
         for link in re.findall(r"\]\((\.\./[^)]+\.md)\)", text):
             if not (f.parent / link).resolve().exists():
                 bad(f"{rel}: dead link {link}")
@@ -141,10 +206,35 @@ def main() -> int:
         if not (ROOT / link).exists():
             bad(f"INDEX.md: points at missing file {link}")
 
+    # timeline_placement — see the module docstring.
+    timeline = (ROOT / "TIMELINE.md").read_text(encoding="utf-8")
+    placed: dict[str, set[str]] = {}
+    current_year = None
+    for line in timeline.splitlines():
+        heading = re.match(r"^## (\d{4})", line)
+        if heading:
+            current_year = heading.group(1)
+        for slug in re.findall(r"\]\(concepts/[^)]*/([a-z0-9\-]+)\.md\)", line):
+            placed.setdefault(slug, set()).add(current_year)
+    for f in files:
+        text = f.read_text(encoding="utf-8")
+        year_field = re.search(r"\*\*Year Introduced:\*\* (\d{4})", text)
+        if not year_field:
+            continue
+        years = placed.get(f.stem)
+        if years and year_field.group(1) not in years:
+            warn(
+                f"{f.relative_to(ROOT).as_posix()}: Year Introduced {year_field.group(1)} "
+                f"but TIMELINE.md lists it under {sorted(y for y in years if y)}"
+            )
+
     print(f"{len(files)} concept pages, {len(known_sources)} source ids")
     print(f"problems: {len(problems)}")
     for problem in problems:
         print(f"  {problem}")
+    print(f"warnings: {len(warnings)}")
+    for warning in warnings:
+        print(f"  {warning}")
     return 1 if problems else 0
 
 

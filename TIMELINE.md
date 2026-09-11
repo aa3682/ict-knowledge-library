@@ -70,6 +70,18 @@ The original ICT mentorship year. Most foundational PD-array, killzone, and orde
   consolidation**" (`ICT-2016-MARKET-EFFICIENCY-PARADIGM` [12:41]) — and is defined against the day:
   "after the high or low is formed, **the range will start expanding**" [15:25–15:31]. The page's
   ATR/K filter is research convention, not ICT. → [range-expansion](concepts/01-market-structure/range-expansion.md)
+- **range-contraction** — ⚠ *re-dated 2022 → 2016 on 2026-09-11, by the `years_vs_citations` lint
+  check added the same day; it was the defect that check was written to find.* Contraction is the
+  **consolidation** member of the same four-phase set, not expansion's binary partner, and the
+  phases alternate within one day: "every day starts with **consolidation**, Asian range" →
+  manipulation → "**another expansion** move down into the New York session" → "**another
+  consolidation**" (`ICT-2016-MARKET-EFFICIENCY-PARADIGM` [13:56–14:23]).
+  → [range-contraction](concepts/01-market-structure/range-contraction.md)
+- **r-multiple** — ⚠ *re-dated 2017 → 2016 on 2026-09-11, same check.* The 3:1 floor is **month
+  two**, October 2016: "identify trade setups that permit **three reward multiples to one risk or
+  higher**" (`ICT-2016-GROWING-SMALL-ACCOUNTS` [05:23–05:40]), with the accuracy arithmetic that
+  justifies it in the same month (`ICT-2016-NO-FEAR-LOSING` [04:42–06:32]). The 2017 swing lectures
+  refine it to 5:1/10:1 and the 34 % break-even. → [r-multiple](concepts/32-risk-management/r-multiple.md)
 - **mitigation of an order block** at the mean threshold — ⚠ *moved from the 2017 section.* Dec 2016: "we want to focus our attention in the midway point of that down candle. That's going to be in the form of the **mean threshold** … **50% level or halfway point is the mean threshold on a bullish order block**" (`ICT-2016-ORDERBLOCKS` [09:52–10:20]); worked return at [24:04–24:21]. → [mitigation-of-ob](concepts/18-mitigation/mitigation-of-ob.md)
 
 ## 2017 — Charter Year
@@ -141,7 +153,7 @@ Refinements of FVG and OB definitions; introduction of OTE and Fibonacci levels;
 - **ny-lunch** — dead-session designation. → [ny-lunch](concepts/15-sessions/ny-lunch.md)
 - **OTE methodology + ICT fib levels** introduced (0.62 / 0.705 / 0.79 retracement; -1.5/-2.0/-2.5/-4.0 projection). → [ote-overview](concepts/17-optimal-trade-entry/ote-overview.md), [ote-62](concepts/17-optimal-trade-entry/ote-62.md), [ote-705](concepts/17-optimal-trade-entry/ote-705.md), [ote-79](concepts/17-optimal-trade-entry/ote-79.md), [ote-rules](concepts/17-optimal-trade-entry/ote-rules.md), [ote-failure](concepts/17-optimal-trade-entry/ote-failure.md), [ict-fib-overview](concepts/28-fibonacci-levels/ict-fib-overview.md), [fib-62](concepts/28-fibonacci-levels/fib-62.md), [fib-705](concepts/28-fibonacci-levels/fib-705.md), [fib-79](concepts/28-fibonacci-levels/fib-79.md), [standard-deviation-projections](concepts/28-fibonacci-levels/standard-deviation-projections.md), [fib-vs-ote](concepts/28-fibonacci-levels/fib-vs-ote.md)
 - **HTF bias framework** introduced (top-down + per-TF reads + invalidation rules). → [htf-bias-framework](concepts/25-htf-bias/htf-bias-framework.md), [monthly-bias](concepts/25-htf-bias/monthly-bias.md), [weekly-bias](concepts/25-htf-bias/weekly-bias.md), [daily-bias](concepts/25-htf-bias/daily-bias.md), [bias-confluence](concepts/25-htf-bias/bias-confluence.md), [bias-invalidation](concepts/25-htf-bias/bias-invalidation.md), [top-down-analysis](concepts/25-htf-bias/top-down-analysis.md)
-- **Risk management** discipline (R-multiple, position sizing, structural SL, partial takes, correlation risk). → [risk-per-trade](concepts/32-risk-management/risk-per-trade.md), [r-multiple](concepts/32-risk-management/r-multiple.md), [position-sizing](concepts/32-risk-management/position-sizing.md), [stop-placement-by-pd-array](concepts/32-risk-management/stop-placement-by-pd-array.md), [partial-takes](concepts/32-risk-management/partial-takes.md), [correlation-risk](concepts/32-risk-management/correlation-risk.md)
+- **Risk management** discipline (position sizing, structural SL, partial takes, correlation risk). ⚠ *`r-multiple` was re-dated **2017 → 2016** on 2026-09-11 and moved to that section — the 3:1 floor is month-two (Oct 2016) material. The 2017 swing lectures refine it, which is why they remain among its Source IDs.* → [risk-per-trade](concepts/32-risk-management/risk-per-trade.md), [position-sizing](concepts/32-risk-management/position-sizing.md), [stop-placement-by-pd-array](concepts/32-risk-management/stop-placement-by-pd-array.md), [partial-takes](concepts/32-risk-management/partial-takes.md), [correlation-risk](concepts/32-risk-management/correlation-risk.md)
 - **displacement** introduced as ICT's algorithmic-intent signature. → [displacement-definition](concepts/09-displacement/displacement-definition.md), [displacement-and-fvg](concepts/09-displacement/displacement-and-fvg.md), [bullish-displacement](concepts/09-displacement/bullish-displacement.md), [bearish-displacement](concepts/09-displacement/bearish-displacement.md), [displacement-strength-criteria](concepts/09-displacement/displacement-strength-criteria.md)
 - **News-driven trading discipline** — three-posture protocol + per-news rules. → [news-driven-overview](concepts/30-news-driven/news-driven-overview.md), [nfp-protocol](concepts/30-news-driven/nfp-protocol.md), [news-blackout-rules](concepts/30-news-driven/news-blackout-rules.md)
 - **time-of-day pivots** (TDO/PDH/PDL/session-extreme references). → [time-of-day-pivots](concepts/04-time-cycles/time-of-day-pivots.md)
@@ -203,11 +215,6 @@ period, but no concept file now carries a 2021 introduction date.
 
 ICT 2022 Mentorship; silver bullet windows formalized; **macro times introduced**. Most foundational concepts received their final operational framing in this year.
 
-- **range-contraction** — phase terminology operationalized. ⚠ *Its partner `range-expansion` was
-  re-dated **2022 → 2016** on 2026-09-11 and moved to that section; `range-contraction` was not in
-  that pass's scope (it cites a real source, `ICT-2016-PO3`, alongside the stub) but **carries the
-  same `Year Introduced: 2022` against a 2016 citation** and should be checked next.* →
-  [range-contraction](concepts/01-market-structure/range-contraction.md)
 - **macro-times-overview** — five canonical 20-min programmed-delivery windows introduced. → [macro-times-overview](concepts/04-time-cycles/macro-times-overview.md)
 - **silver-bullet** three windows formalized in 2022 mentorship. → [silver-bullet-overview](concepts/11-silver-bullet/silver-bullet-overview.md), [silver-bullet-london](concepts/11-silver-bullet/silver-bullet-london.md), [silver-bullet-ny-am](concepts/11-silver-bullet/silver-bullet-ny-am.md), [silver-bullet-ny-pm](concepts/11-silver-bullet/silver-bullet-ny-pm.md), [silver-bullet-rules](concepts/11-silver-bullet/silver-bullet-rules.md), [silver-bullet-failure-modes](concepts/11-silver-bullet/silver-bullet-failure-modes.md)
 - **ICT 2022 Model** — flagship multi-step framework. ⚠ *Its three companion pages —

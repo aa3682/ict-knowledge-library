@@ -6,6 +6,47 @@ Per the Karpathy LLM Wiki pattern, this file complements [`INDEX.md`](INDEX.md) 
 
 ---
 
+## [2026-09-11] lint | Added years_vs_citations + timeline_placement to tools/lint.py. 5 warnings, 2 real, both fixed.
+
+The three existing year/source checks all compare **one surface of a page against another surface of
+the same page** — they pass when every surface carries the *same wrong year*, which is exactly what a
+stub-sourced page looks like. `years_vs_citations` is the first check reading the declared year
+against **evidence**: the years encoded in the page's own Source IDs. Stub and placeholder IDs are
+excluded (`UNDATED_SOURCES`) — including their year is how the mis-dating happened.
+
+**5 warnings vault-wide, smaller than expected** (the Aug 2026 passes caught most):
+- ⚠ **`range-contraction` 2022 → 2016** — REAL, and predicted by the previous report. Contraction is
+  the **consolidation** member of the Sep-2016 four-phase set, not expansion's binary partner; the
+  phases alternate within a day (`ICT-2016-MARKET-EFFICIENCY-PARADIGM` [13:56–14:23]). Re-cited, stub
+  dropped.
+- ⚠ **`r-multiple` 2017 → 2016** — REAL, and **no prior pass flagged it**. The 3:1 floor is month two,
+  Oct 2016: "three reward multiples to one risk or higher" (`ICT-2016-GROWING-SMALL-ACCOUNTS`
+  [05:23–05:40]) + the accuracy model (`ICT-2016-NO-FEAR-LOSING` [04:42–06:32]). The 2017 swing
+  lectures refine it, so those IDs stay. Stub dropped.
+- `crt-vs-amd` — false positive **by design**: a disambiguation page is dated by the newer concept
+  while citing an older source for the other. Not suppressed (that would hide real mis-datings on
+  comparison pages); the warning carries an inline hint instead.
+- `smt-failure`, `cpi-protocol` — the check **independently rediscovered two known issues**, both
+  already documented on their pages and in TIMELINE. No action; good evidence the check works.
+
+**Second check added beyond the ask: `timeline_placement`.** AGENTS.md → Lint step 4 requires it and
+**nothing implemented it**, so every re-dating pass silently desynced TIMELINE from the pages. This
+session broke placement twice (the two re-dates above) with nothing to catch it. Now 0 misplaced
+across 287 pages.
+
+Both are **warnings, not problems** — exit stays 0. A year mismatch needs judgment, not a red build.
+Mutation-tested: reverting `range-contraction` to 2022 on a scratch copy fires both; restoring
+silences them.
+
+⚠ **Open:** warnings have no acknowledgement mechanism, so the 3 expected ones will recur on every
+run and a noisy check gets ignored. Recommend an in-page `lint: expected` marker over an allowlist —
+justification stays next to the claim. Not built; convention change, owner's call.
+
+Report: [`meta/lint-report-2026-09-11-d.md`](meta/lint-report-2026-09-11-d.md). `tools/lint.py`:
+287 pages, 191 source ids, 0 problems, 3 warnings.
+
+---
+
 ## [2026-09-11] fix | All six stub-only pages were verifiable and all six were mis-dated. None is 2022 content.
 
 Closes the follow-up from this morning's second pass. Every page resting solely on the registry stub

@@ -3,9 +3,9 @@
 **Category:** 32-risk-management
 **Aliases:** R, R:R, R-multiple, risk-reward
 **ICT Confidence:** high
-**Year Introduced:** 2017
+**Year Introduced:** 2016
 **Year Refined:** 2022
-**Source IDs:** ICT-2016-GROWING-SMALL-ACCOUNTS, ICT-2016-NO-FEAR-LOSING, ICT-2017-CHARTER-OVERVIEW, ICT-2017-SWING-ELEMENTS, ICT-2017-SWING-REDUCE-RISK, ICT-2022-MENTORSHIP-OVERVIEW
+**Source IDs:** ICT-2016-GROWING-SMALL-ACCOUNTS, ICT-2016-NO-FEAR-LOSING, ICT-2017-CHARTER-OVERVIEW, ICT-2017-SWING-ELEMENTS, ICT-2017-SWING-REDUCE-RISK
 **Tags:** risk, r-multiple, foundational
 
 ## Definition
@@ -132,10 +132,10 @@ breakeven_win_rate(R) = 1 / (1 + R)
   ],
   "timeframes": ["all"],
   "confidence": "high",
-  "year_introduced": "2017",
+  "year_introduced": "2016",
   "year_refined": "2022",
   "related": ["risk-per-trade","position-sizing","stop-placement-by-pd-array","partial-takes","swing-trading-hallmarks","six-percent-monthly-model","loss-mitigation-half-size-reentry"],
-  "sources": ["ICT-2016-GROWING-SMALL-ACCOUNTS","ICT-2016-NO-FEAR-LOSING","ICT-2017-CHARTER-OVERVIEW","ICT-2017-SWING-ELEMENTS","ICT-2017-SWING-REDUCE-RISK","ICT-2022-MENTORSHIP-OVERVIEW"]
+  "sources": ["ICT-2016-GROWING-SMALL-ACCOUNTS","ICT-2016-NO-FEAR-LOSING","ICT-2017-CHARTER-OVERVIEW","ICT-2017-SWING-ELEMENTS","ICT-2017-SWING-REDUCE-RISK"]
 }
 ```
 
@@ -181,7 +181,14 @@ All TFs.
 
 ## Citations
 
-- `ICT-2017-CHARTER-OVERVIEW`, `ICT-2022-MENTORSHIP-OVERVIEW`.
+- `ICT-2017-CHARTER-OVERVIEW`.
+- ⚠ **Re-dated 2017 → 2016 on 2026-09-11**, by the `years_vs_citations` lint check added the same
+  day. The 3:1 floor is taught in **month two** of the mentorship — October 2016, not 2017: "identify
+  trade setups that permit **three reward multiples to one risk or higher**"
+  (`ICT-2016-GROWING-SMALL-ACCOUNTS`, 05:23–05:40), with the accuracy arithmetic that makes it work
+  in the same month (`ICT-2016-NO-FEAR-LOSING`, 04:42–06:32). The 2017 swing lectures **refine** it
+  (5:1 and 10:1, the 34 % break-even) — hence `Year Refined: 2022` is unchanged and the 2017 IDs
+  stay. The registry stub `ICT-2022-MENTORSHIP-OVERVIEW` is dropped.
 - `ICT-2016-GROWING-SMALL-ACCOUNTS` (00:23) "This is month two of the ICT Mentorship. This is **teaching one of eight of the second month of twelve**"; (05:23–05:40) "Identify trade setups that permit **three reward multiples to one risk or higher**"; (07:20–07:33) "accuracy is not even necessary in terms of high end accuracy to make money… but you do need **time**"; (07:40–09:08) ⚠ **the accuracy → minimum-ratio table** — 75 %, 60 %, then 50 % → "you got to start risking $1 for $1", 40 % → "$1.50 for every $1", 33 % → "$2 for every $1 risk", and **25 % → "the minimum ratio for profitability is you have to look for trades that pay out 3 to 1"**; (09:08–09:41) "we can be wrong 75 % of the time and still be net profitable"; (15:26–15:48) the 6 %/month model at 1.5 % risk and 1:1; (28:04–28:07) the worked example is "a five to one setup". ⚠ Previously referenced on this page as an unlinked italic mention with the ID missing from both header and JSON — corrected 2026-08-11 along with the "every figure sits above 25 %" claim it was cited to support.
 - `ICT-2017-SWING-ELEMENTS` (12:35–13:33) "probabilities reward diligence… limiting setups to three to one reward risk permits as low as 34 % accuracy to be net profitable… that means you're making money when you're wrong 66 % of the time"; 5× risk preferred as it "endures losses much easier"; "the setups that we have the most movement potential offer the better risk to reward ratios."
 - `ICT-2017-SWING-REDUCE-RISK` (07:00–07:29) "use nothing less than three to one reward to risk ratios… many times it's going to be five to one, ten to one is not unheard of"; (07:29–07:54) "when you trade with reward to risk ratio conditions, you only need to be accurate 30 % of the time to be profitable… you can lose 70 % of the time if you're trading with three to one"; (11:41–12:22) R-multiple defined as reward on the risk associated with the trade, with professionals putting "very little money at risk to get huge price moves"; (12:14–12:26) "higher time frame levels that offer ranges of 200 to 500 pips, they can yield up to 10 R wins".

@@ -3,9 +3,9 @@
 **Category:** 01-market-structure
 **Aliases:** contraction, contraction phase, consolidation, accumulation range
 **ICT Confidence:** high
-**Year Introduced:** 2022
+**Year Introduced:** 2016
 **Year Refined:** 2022
-**Source IDs:** ICT-2022-MENTORSHIP-OVERVIEW, ICT-2016-PO3
+**Source IDs:** ICT-2016-MARKET-EFFICIENCY-PARADIGM, ICT-2016-PO3
 **Tags:** structure, contraction, consolidation, accumulation, dealing-range
 
 ## Definition
@@ -43,10 +43,10 @@ contraction := no_external_bos
   ],
   "timeframes": ["M5","M15","H1","H4","D"],
   "confidence": "high",
-  "year_introduced": "2022",
+  "year_introduced": "2016",
   "year_refined": "2022",
   "related": ["range-expansion","accumulation-phase","equal-highs","equal-lows","liquidity-pool","dealing-range"],
-  "sources": ["ICT-2022-MENTORSHIP-OVERVIEW","ICT-2016-PO3"]
+  "sources": ["ICT-2016-MARKET-EFFICIENCY-PARADIGM","ICT-2016-PO3"]
 }
 ```
 
@@ -91,5 +91,14 @@ All M5 → D. HTF contractions (D / H4) often last days and produce the largest 
 
 ## Citations
 
-- `ICT-2016-PO3` — accumulation phase concept (foundational PO3 lecture).
-- `ICT-2022-MENTORSHIP-OVERVIEW` — expansion/contraction terminology for chart reading.
+- `ICT-2016-MARKET-EFFICIENCY-PARADIGM` (`XwYYWBttWro`, Month 1, **September 2016**) —
+  contraction is the **consolidation** member of a four-phase set, not expansion's binary
+  partner: "understanding **expansion, retracement, reversal, and consolidation**" [12:41]. The
+  phases alternate through a single day — "every day starts with **consolidation**, Asian range"
+  [13:56], then manipulation, "**another expansion** move down into the New York session", then
+  "**another consolidation** … the New York consolidation" [14:03–14:23].
+- `ICT-2016-PO3` — the accumulation phase, which is this page's PO3-side framing.
+- ⚠ **Re-dated 2022 → 2016 on 2026-09-11**, by the `years_vs_citations` lint check added the same
+  day. The page was dated 2022 while citing a 2016 source; its only other citation was the
+  registry stub `ICT-2022-MENTORSHIP-OVERVIEW`, now dropped. Its partner
+  [range-expansion](range-expansion.md) was re-dated earlier the same day.
