@@ -6,6 +6,29 @@ Per the Karpathy LLM Wiki pattern, this file complements [`INDEX.md`](INDEX.md) 
 
 ---
 
+## [2026-09-11] meta | hot.md rewritten to budget: 968 → 532 words
+
+The hot cache had been appended to rather than rewritten and had drifted to **968 words against
+its ~500 budget** (`CLAUDE.md` → operations map). At that size it fails its own purpose — it is the
+first thing a cross-project reader loads, and the budget is the point. Rewritten as the documented
+op says: overwrite, not append.
+
+**Dropped, deliberately — all of it recoverable from this log:** the tranche-by-tranche Aug-2026
+distillation detail (collapsed to one line); the three threads closed 2026-08-10 (*eight-vs-six
+projected ranges*, *30 % vs 34 % breakeven*, *ny-judas-swing dating*) — they are **closed**, their
+conclusions live on the pages themselves, and closed threads do not belong in a hot cache; the
+backlog-closed notice; and the per-page links, which cost words the cache cannot spare when
+`INDEX.md` is one hop away.
+
+**Kept, as the things that prevent a future agent making a mistake:** the ⚠⚠ Core-Content
+re-upload rule and its month → calendar map; the ⚠⚠ stub warning; the method rules, including
+never asserting an absence without enumerating the population; the counts; the lint tooling state;
+and the live open threads.
+
+No concept file touched. `tools/lint.py`: 287 pages, 191 source ids, 0 problems, 3 warnings.
+
+---
+
 ## [2026-09-11] lint | Added years_vs_citations + timeline_placement to tools/lint.py. 5 warnings, 2 real, both fixed.
 
 The three existing year/source checks all compare **one surface of a page against another surface of
