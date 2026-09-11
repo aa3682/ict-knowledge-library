@@ -17,7 +17,9 @@ The ICT 2022 Model is the **flagship multi-step institutional setup framework** 
 The 2022 Model's setup sequence:
 
 1. **HTF bias** clear (D/W align).
-2. **Killzone window** active (London open / NY AM / London close).
+2. **Killzone window** active — London Open `02:00-05:00`, NY AM `08:00-11:00`, or London
+   Close `10:00-12:00` (NY time, public / 2016+2022 set per
+   [killzone-times-table](../10-killzones/killzone-times-table.md)).
 3. **Liquidity sweep** of a known pool (Asian range, PDH/PDL, session high/low).
 4. **Displacement** in the bias direction with an FVG inside or after.
 5. **Entry on FVG retest** at CE (per 2025 default).
@@ -29,9 +31,15 @@ The model is **time-and-pattern combined** — both the killzone and the structu
 ## Formula / Math
 
 ```
+named_KZ_NY = {                 # public / 2016+2022 set
+  "london_open":  (02:00, 05:00),
+  "ny_am":        (08:00, 11:00),
+  "london_close": (10:00, 12:00),
+}
+
 ict_2022_model :=
     htf_bias_clear
-    AND in_killzone_window
+    AND in_killzone_window(t, named_KZ_NY)
     AND liquidity_sweep_just_occurred
     AND displacement_with_FVG_in_bias_direction
     AND entry_at_FVG_CE
@@ -48,13 +56,14 @@ ict_2022_model :=
   "aliases": ["ICT-2022-setup", "2022-mentorship-model"],
   "criteria": [
     {"id": "c1", "expr": "htf_bias + killzone + sweep + displacement + FVG + CE entry"},
-    {"id": "c2", "expr": "all 7 steps required"}
+    {"id": "c2", "expr": "all 7 steps required"},
+    {"id": "c3", "expr": "killzone_NY in {london_open == [02:00,05:00], ny_am == [08:00,11:00], london_close == [10:00,12:00]}"}
   ],
   "timeframes": ["M5","M15","H1","H4"],
   "confidence": "high",
   "year_introduced": "2022",
   "year_refined": "2022",
-  "related": ["ict-2023-model","ict-2024-model","silver-bullet-overview","silver-bullet-rules","htf-bias-framework","killzone-overview","liquidity-sweep","displacement-definition","fair-value-gap","ce-as-primary-entry"],
+  "related": ["ict-2023-model","ict-2024-model","silver-bullet-overview","silver-bullet-rules","htf-bias-framework","killzone-overview","killzone-times-table","liquidity-sweep","displacement-definition","fair-value-gap","ce-as-primary-entry"],
   "sources": ["ICT-2022-MENTORSHIP-OVERVIEW"]
 }
 ```
@@ -99,7 +108,7 @@ M5–H4 entry; D/W for bias.
 
 - [ict-2023-model](ict-2023-model.md), [ict-2024-model](ict-2024-model.md) — successor refinements.
 - [silver-bullet-overview](../11-silver-bullet/silver-bullet-overview.md), [silver-bullet-rules](../11-silver-bullet/silver-bullet-rules.md) — narrower 60-min variant.
-- [htf-bias-framework](../25-htf-bias/htf-bias-framework.md), [killzone-overview](../10-killzones/killzone-overview.md), [liquidity-sweep](../02-liquidity/liquidity-sweep.md), [displacement-definition](../09-displacement/displacement-definition.md), [fair-value-gap](../06-fair-value-gaps/fair-value-gap.md), [ce-as-primary-entry](../06-fair-value-gaps/ce-as-primary-entry.md).
+- [htf-bias-framework](../25-htf-bias/htf-bias-framework.md), [killzone-overview](../10-killzones/killzone-overview.md), [killzone-times-table](../10-killzones/killzone-times-table.md), [liquidity-sweep](../02-liquidity/liquidity-sweep.md), [displacement-definition](../09-displacement/displacement-definition.md), [fair-value-gap](../06-fair-value-gaps/fair-value-gap.md), [ce-as-primary-entry](../06-fair-value-gaps/ce-as-primary-entry.md).
 
 ## Citations
 

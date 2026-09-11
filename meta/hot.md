@@ -1,23 +1,24 @@
 ---
 type: meta
 title: "Hot Cache"
-updated: 2026-08-09
+updated: 2026-09-11
 ---
 
 # Recent Context
 
 ## Last Updated
 
-2026-08-09. **Video-corpus distillation programme - BACKLOG CLOSED.** The vault sits on top of a
+2026-09-11. Last substantive work: **video-corpus distillation programme - BACKLOG CLOSED**
+(2026-08-09/11), plus a targeted lint on the 2022 Model's killzones (2026-09-11, below). The vault sits on top of a
 153-packet / 59-hour transcript corpus in `raw/`. All 31 triaged lectures have been read and
 resolved: **17 new concept pages, 6 refinements of existing pages, 3 dating corrections**, and
 7 correctly rejected as non-concepts. Lint clean.
 
 ## Key Recent Facts
 
-- **252 concept pages** across 33 numbered domain folders (+1 directory README in
-  `99-glossary/`, which is why earlier entries said "240 files" for 239 pages — the count
-  now states both). **97 Source IDs.**
+- **287 concept pages** across 33 numbered domain folders (+1 directory README in
+  `99-glossary/`). **191 Source IDs.** Counts verified by `tools/lint.py`, 2026-09-11;
+  this block previously read 252/97 and was a month stale.
 - **Two-layer state is intentional.** `raw/` holds 153 packets / 59 hrs / 148 usable;
   only a minority is distilled into concept pages. The rest is searchable but uncited.
 - ⚠ **Core Content lectures are the 2016–2017 mentorship re-uploaded in 2022.** Each names
@@ -35,6 +36,10 @@ resolved: **17 new concept pages, 6 refinements of existing pages, 3 dating corr
 
 ## Recent Changes
 
+- **2026-09-11 lint** — `ict-2022-model` killzones were prose-only; the three windows now
+  carry NY times in Formal Criteria, the Formula block (`named_KZ_NY`), and JSON `criteria.c3`.
+  Encoded as a `criteria[].expr`, **not** a new top-level key: all 287 JSON blocks carry the
+  same 10 keys, zero exceptions. Report: [lint-report-2026-09-11](lint-report-2026-09-11.md).
 - **Tranche 3** — [ict-day-trading-model](../concepts/31-models/ict-day-trading-model.md),
   [timeframe-selection](../concepts/25-htf-bias/timeframe-selection.md),
   [bond-yield-analysis](../concepts/03-order-flow/bond-yield-analysis.md),
@@ -65,6 +70,12 @@ resolved: **17 new concept pages, 6 refinements of existing pages, 3 dating corr
 - **Lint is now `tools/lint.py`**, not a re-typed one-liner. It gained header↔JSON checks for
   **sources** and **year** after three pages were found with headers that disagreed with their
   JSON — an edit-shape failure no existing check could see. Run it before every commit.
+- ⚠ **OPEN (2026-09-11): `ict-2022-model` states its killzone rule twice, incompatibly.**
+  Formal Criteria step 2 names three windows (London Open / NY AM / London Close); Common
+  Mistakes bullet 3 says "any killzone / DOL combination." Exhaustive whitelist, or
+  illustrative list? Needs `ICT-2022-MENTORSHIP-OVERVIEW` re-read — a lint pass should not
+  decide doctrine. Same page has **no MSS step** anywhere; chain is sweep → displacement
+  (FVG forms) → CE retest. Both flagged, neither actioned.
 - Remaining corpus (~120 packets) is searchable but uncited. That two-layer state is intended.
 - Layout deviates from the canonical wiki-skill scaffold (kebab-case files, markdown
   relative links, bold-key headers, no `wiki/` wrapper). Deliberate; see `CLAUDE.md`.

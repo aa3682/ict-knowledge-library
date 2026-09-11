@@ -6,6 +6,41 @@ Per the Karpathy LLM Wiki pattern, this file complements [`INDEX.md`](INDEX.md) 
 
 ---
 
+## [2026-09-11] lint | 2022 Model killzones were prose-only; now in the JSON. One contradiction left open.
+
+A query for the 2022 Model's exact killzone windows could not be answered from
+`concepts/31-models/ict-2022-model.md`'s JSON block — `criteria` said `killzone` as a bare token,
+with no windows and no times. The three windows existed only as names in Formal Criteria prose.
+
+**Closed.** Added `c3` carrying `london_open == [02:00,05:00]`, `ny_am == [08:00,11:00]`,
+`london_close == [10:00,12:00]`. Put the NY times into Formal Criteria step 2 and into the Formula
+block (`named_KZ_NY`, and the predicate now takes it as an argument). Added `killzone-times-table`
+to `related[]` + `## Related Concepts`, and recorded that this page takes the **public / 2016+2022**
+set, not the April-2017 mentorship set (London `01:00-05:00`, NY `07:00-10:00`) — the page is
+sourced from `ICT-2022-MENTORSHIP-OVERVIEW`.
+
+Encoded as a `criteria[].expr` entry, **not** a new top-level `killzones` key: all 287 JSON blocks
+in the vault carry the same 10 keys with zero exceptions, and `killzone-times-table` c3 is the
+standing precedent for time values inside `criteria`.
+
+⚠ **Open — the page states the killzone rule twice, incompatibly.** Formal Criteria step 2 names
+exactly three windows; Common Mistakes bullet 3 says the model "includes **any killzone** / DOL
+combination." If step 2 is exhaustive, Asia and NY PM are excluded and bullet 3 is wrong; if
+bullet 3 is right, step 2 is illustrative, not a whitelist. **Not resolved here** — it needs
+`ICT-2022-MENTORSHIP-OVERVIEW` re-read, and a lint pass should not decide doctrine. An earlier
+draft of this edit asserted the exclusion in three places; backed out.
+
+Also noted, not actioned: the page has **no MSS step** at all (nor do `ict-2023-model` /
+`ict-2024-model`; `unicorn-model` is the only `31-models/` file mentioning it). The chain is
+sweep → displacement (FVG forms) → CE retest.
+
+Collateral: `meta/hot.md` claimed **252 pages / 97 Source IDs**; `tools/lint.py` says **287 / 191**,
+matching the 2026-08-11 entry. A month stale on both — corrected, with the source of the numbers now
+stated on the page. It is also 749 words against a ~500 budget; not trimmed, that needs the owner.
+
+Report: [`meta/lint-report-2026-09-11.md`](meta/lint-report-2026-09-11.md). `tools/lint.py`:
+287 pages, 191 source ids, 0 problems.
+
 ## [2026-08-11] distill | Corpus closed at 151/153; two definitions found inverted; half the library is still stub-sourced
 
 **The final 38 packets read in full** — the Month 01/02/03/04/06/08/09 tails and all 21 non-Core
